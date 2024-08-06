@@ -6,6 +6,12 @@ export default await (async () => {
     const toggleTheme = () => {
         theme.value = theme.value === 'light' ? 'dark' : 'light';
         localStorage.setItem('theme', theme.value);
+        if (theme.value === 'light') {
+            document.body.removeAttribute('arco-theme');
+        }
+        else {
+            document.body.setAttribute('arco-theme', 'dark');
+        }
     };
     onMounted(() => {
         const savedTheme = localStorage.getItem('theme');

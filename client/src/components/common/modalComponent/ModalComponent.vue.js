@@ -54,13 +54,36 @@ function __VLS_template() {
         (__VLS_ctx.modalMessage);
         // @ts-ignore
         [isVisible, close, modalMessage,];
-        __VLS_elementAsFunction(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)({ ...{ onClick: (__VLS_ctx.close) }, });
+        // @ts-ignore
+        const __VLS_0 = {}
+            .AButton;
+        ({}.AButton);
+        ({}.AButton);
+        __VLS_components.AButton;
+        __VLS_components.aButton;
+        __VLS_components.AButton;
+        __VLS_components.aButton;
+        // @ts-ignore
+        [AButton, AButton,];
+        // @ts-ignore
+        const __VLS_1 = __VLS_asFunctionalComponent(__VLS_0, new __VLS_0({ ...{ 'onClick': {} }, ...{ class: ("modalConfirmButton") }, }));
+        const __VLS_2 = __VLS_1({ ...{ 'onClick': {} }, ...{ class: ("modalConfirmButton") }, }, ...__VLS_functionalComponentArgsRest(__VLS_1));
+        ({}({ ...{ 'onClick': {} }, ...{ class: ("modalConfirmButton") }, }));
+        let __VLS_6;
+        const __VLS_7 = {
+            onClick: (__VLS_ctx.close)
+        };
         // @ts-ignore
         [close,];
+        (__VLS_5.slots).default;
+        const __VLS_5 = __VLS_pickFunctionalComponentCtx(__VLS_0, __VLS_2);
+        let __VLS_3;
+        let __VLS_4;
     }
     if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
         __VLS_styleScopedClasses['modal-overlay'];
         __VLS_styleScopedClasses['modal-content'];
+        __VLS_styleScopedClasses['modalConfirmButton'];
     }
     var __VLS_slots;
     return __VLS_slots;

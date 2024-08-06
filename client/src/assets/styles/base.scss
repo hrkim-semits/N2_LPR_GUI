@@ -6,7 +6,8 @@ html, body {
   width: 100vw;
   height: 100vh;
   font-size: 1vw;
-  font-family: 'Poppins', 'Play', 'Pretendard', '맑은 고딕', 'malgun gothic', Arial, sans-serif;
+  // font-family: 'Poppins', 'Play', 'Pretendard', '맑은 고딕', 'malgun gothic', Arial, sans-serif;
+  font-family: 'Pretendard', '맑은 고딕', 'malgun gothic', Arial, sans-serif;
   background-color: var(--background_color);
   @include modeTransition();
 }

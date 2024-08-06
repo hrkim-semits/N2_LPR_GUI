@@ -134,7 +134,7 @@ function __VLS_template() {
     // @ts-ignore
     [isStop, isStop, handleClick,];
     __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({});
-    (__VLS_ctx.isConnected ? 'connected' : 'not connected');
+    (__VLS_ctx.isConnected ? 'websocket: connected' : 'websocket: not connected');
     // @ts-ignore
     [isConnected,];
     if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {

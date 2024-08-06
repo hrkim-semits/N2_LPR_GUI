@@ -46,15 +46,22 @@ const returnWholeSettingInfos = ():object => {
       const className = element.className;
       const value = element.value;
 
-      if (index==0) {
-        dataObj[className] = [];
-        dataObj[className].push(value);
-      } else {
-        if (Array.isArray(dataObj[className])) {
-          dataObj[className].push(value);
-        }
-      }
-    });
+    //   if (index==0) {
+    //     dataObj[className] = [];
+    //     dataObj[className].push(value);
+    //   } else {
+    //     if (Array.isArray(dataObj[className])) {
+    //       dataObj[className].push(value);
+    //     }
+    //   }
+    // });
+
+    if (index === 0) {
+      dataObj[className] = [value];
+    } else if (Array.isArray(dataObj[className])) {
+      (dataObj[className] as string[]).push(value);
+    }
+  });
 
     settingAllObj.MessageData.DataList.push(dataObj);
   });
