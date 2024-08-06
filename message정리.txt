@@ -1,0 +1,175 @@
+1. Setting
+[1-1]
+- 사용자가 설정한 값 req
+
+* 메시지 하나에 모든 값
+// TargetCommand 카멜케이스 사용하기
+{
+    "MessageID": "SingalGUIMsgPurgeReq",
+    "MessageData":{ 
+        "DataList": [
+            {
+                "TargetCommand": "INF:PODON;",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "INF:PODOF;",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "INF:SMTON;",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "INF:ABNST;",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "INF:CLDMP;",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "INF:CULOD",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "MOV:CLDMP",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "MOV:CULOD",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "MOV:MAPDO",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "GET:MAPDT;",
+                "TargetFlow": "100"
+            },
+            {
+                "TargetCommand": "PostPurge",
+                "TargetFlow": "100",
+                "PurgeDurationOfMillis": "3000"
+            },
+            {
+                "TargetCommand": "EMO",
+                "TargetStatus": [
+                    "Status1", 
+                    "Status2"
+                ]
+            }
+        ],
+        "BaseTime": ""
+    }
+}
+
+* 메시지 하나당 하나의 값
+
+- FLOW
+{
+    "MessageID": "SingalGUIMsgPurgeReq",
+    "MessageData": {
+        "TargetCommand": "INF:PODON;",
+        "TargetFlow": "100",
+        "BaseTime": ""
+    }
+}
+
+- Post purge
+{
+    "MessageID": "SingalGUIMsgPurgeReq",
+    "MessageData": {
+        "TargetCommand": "PostPurge",
+        "TargetFlow": "100",
+        "PurgeDurationOfMillis": "3000",
+        "BaseTime": ""
+    }
+}
+
+- EMO
+{
+    "MessageID": "SingalGUIMsgPurgeReq",
+    "MessageData": {
+        "TargetCommand": "EMO",
+        "TargetStatus": [
+            "Status1", 
+            "Status2"
+        ],
+        "BaseTime": ""
+    }
+}
+
+[1-2]
+- req에 대한 응답
+{
+    "MessageID": "SingalGUIMsgPurgeRsp",
+    "MessageData": {
+        "TargetFlowResult": "100",
+        "BaseTime": ""
+    }
+}
+...
+
+2. Event (이벤트성)
+[2-1]
+- 이벤트가 일어났을 때 res
+CarrierDetected / DoorOpen / DoorClose / CarrierNotProperlySeated
+{
+    "MessageID": "SingalGUIMsgEventRsp",
+    "MessageData": {
+        "ZoneID": "11110010",
+        "OccurredEvent": "CarrierDetected",
+        "BaseTime": ""
+    }
+}
+
+3. Error
+[3-1]
+- GUI Error req
+{
+    "MessageID": "D1GUIMsgErrorReq",
+    "MessageData": {
+        "OccurredError": "",
+        "BaseTime": ""
+    }
+}
+
+4. Status (port 별로)
+[4-1]
+- page load 후 서버에 req
+{
+    "MessageID": "D1GUIMsgZoneInfosReq",
+    "MessageData": {
+        "OwnerIDs": "",
+        "BaseTime": ""
+    }
+}
+
+[4-2]
+- req 후 받는 res
+{
+  "MessageID": "D1GUIMsgZoneInfosRsp",
+  "MessageData": {
+    "Index": "0",
+    "IndexCount": "0",
+    "ZoneString": "{\"ZoneID\":\"10010010\",\"Name\":\"10010010\",\"Level\":\"-1\",\"Direction\":\"0\",\"OccupiedAttributes\":{\"ZoneID\":\"10010010\",\"ReservedTaskID\":\"-1\"},\"StateAttributes\":{\"ZoneID\":\"10010010\",\"ZoneState\":\"0\",\"AlarmID\":\"-1\"},\"Maker\":\"-1\",\"LPRPurgeAttributes\":{\"ZoneID\":\"10010010\",\"Flow1\":\"-1\",\"Flow2\":\"-1\",\"Flow3\":\"-1\",\"Pressure\":\"-1\",\"Humidity\":\"-1\",\"Temperature\":\"-1\"},\"LPRUserAttributes\":{\"ZoneID\":\"10010010\",\"AutoIOPort\":\"-1\"}}",
+    "ZoneGUIDataString": "",
+    "BaseTime": ""
+  }
+}
+
+[4-3]
+- update data (res)
+{
+  "MessageID":"LPRZonePurgeAttributesMsg",
+  "MessageData": 
+    {
+      "ArchiveObject":
+        {
+          "ZoneID":"11110020","Flow1":"96","Flow2":"5","Flow3":"66","Pressure":"74","Humidity":"86","Temperature":"31"
+        },
+      "BaseTime":""
+    }
+}

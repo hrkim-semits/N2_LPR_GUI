@@ -1,0 +1,22 @@
+$sideBar-width: 18%;
+
+$header-height: 10%;
+$footer-height: 5%;
+
+$sideBar-height: calc(100% - $header-height);
+$main-width: calc(100% - $sideBar-width);
+
+$main-height: calc(100% - $header-height - $footer-height);
+$sideBar-height: calc(100% - $header-height - $footer-height);
+
+// font-size (px -> rem)
+$pxToRem10: 0.98rem;
+$pxToRem12: 1.17rem;
+$pxToRem14: 1.37rem;
+$pxToRem16: 1.56rem;
+$pxToRem18: 1.76rem;
+$pxToRem24: 2.34rem;
+$pxToRem28: 2.73rem;
+$pxToRem32: 3.12rem;
+$pxToRem38: 3.71rem;
+$pxToRem42: 4.1rem;

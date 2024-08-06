@@ -1,0 +1,121 @@
+.sideBar {
+  width: $sideBar-width;
+  height: $sideBar-height;
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  float: left !important;
+  position: relative;
+  background-color: var(--bg-light);
+  background-color: var(--dark-elevation-black-6);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  @include modeTransition();
+
+  .sideBarNav {
+    width: 100%;
+    height: fit-content;
+
+    .sideBarNavList {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+  
+      li {
+        width: 100%;
+        height: 3.9rem;
+        box-sizing: border-box;
+        font-size: $pxToRem14;
+
+        &:last-child {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 0.87rem 1.17rem;
+          box-sizing: border-box;
+          // 아이콘 컬러
+          color: var(--text-primary);
+
+          span {
+            color: var(--text-primary);
+            font: {
+              family: 'Play';
+              weight: 700;
+              size: $pxToRem16;
+            }
+          }
+
+          &.route-active {
+            color: #fff;
+            background-color: $semi-ts_dark_blue;
+            border-radius: 2.92rem;
+            border-radius: 2.92rem 0 0 2.92rem;
+            span {
+              color: #fff;
+            }
+          }
+  
+          .menuIcon {
+            width: 1.75rem;
+            height: 1.75rem;
+            margin-right: 0.48rem;
+          }
+
+          span {
+            display: inline-block;
+            height: fit-content;
+          }
+        }
+      }
+    }
+  }
+
+  .emergencyBtn {
+    width: 82%;
+    height: 9.76rem;
+    position: absolute;
+    bottom: 2.92rem;
+    border: none;
+    padding: 0.39rem;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+    color: #fff;
+    color: var(--emergency-btn-text-color);
+    background: var(--emergency-btn-background);
+    width: 11.71rem; 
+    height: 11.71rem; 
+    border-radius: 50%; 
+    padding-top: 0.97rem;
+    box-shadow: var(--emergency-btn-shadow);
+    transition: 0.3s all ease;
+    letter-spacing: -.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: {
+      family: 'Play';
+      weight: 700;
+      size: $pxToRem18;
+    }
+
+    &.active {
+      transform: translateY(0.29rem);
+      box-shadow: 0 0.39rem 0 rgb(0, 165, 88), 0 0.68rem 0.97rem rgba(0,0,0,.35);
+      background: -webkit-radial-gradient(center 50px, circle farthest-corner, $green-4, $green-6 100%);
+    }
+  }
+}

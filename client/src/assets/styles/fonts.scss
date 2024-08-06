@@ -1,0 +1,75 @@
+// pretendard - 400(regular) / 700(bold)
+// otf, woff, woff2
+
+// Pretendard Regular
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-display: swap;
+  src: url('@/assets/fonts/Pretendard-Regular.woff2') format('woff2'),
+       url('@/assets/fonts/Pretendard-Regular.woff') format('woff'),
+       url('@/assets/fonts/Pretendard-Regular.otf') format('opentype');
+
+}
+
+// Pretendard Bold
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-display: swap;
+  src: url('@/assets/fonts/Pretendard-Bold.woff2') format('woff2'),
+       url('@/assets/fonts/Pretendard-Bold.woff') format('woff'),
+       url('@/assets/fonts/Pretendard-Bold.otf') format('opentype');
+}
+
+
+// Poppins - 400(regular) / 700(bold)
+// ttf, woff, woff2
+
+// Poppins Regular
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/poppins-regular-webfont.woff2') format('woff2'),
+       url('@/assets/fonts/poppins-regular-webfont.woff') format('woff'),
+       url('@/assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+// Poppins Bold
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/poppins-bold-webfont.woff2') format('woff2'),
+       url('@/assets/fonts/poppins-bold-webfont.woff') format('woff'),
+       url('@/assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+// Play - 400(regular) / 700(bold)
+// ttf, woff, woff2
+
+// Play Regular
+@font-face {
+  font-family: 'Play';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/play-regular-webfont.woff2') format('woff2'),
+       url('@/assets/fonts/play-regular-webfont.woff') format('woff'),
+       url('@/assets/fonts/Play-Regular.ttf') format('truetype');
+}
+
+// Play Bold
+@font-face {
+  font-family: 'Play';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('@/assets/fonts/play-bold-webfont.woff2') format('woff2'),
+       url('@/assets/fonts/play-bold-webfont.woff') format('woff'),
+       url('@/assets/fonts/Play-Bold.ttf') format('truetype');
+}
+

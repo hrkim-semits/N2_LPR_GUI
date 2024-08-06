@@ -1,0 +1,21 @@
+@import './fonts.scss';
+@import './variables.scss';
+@import './mixins.scss';
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1vw;
+  font-family: 'Poppins', 'Play', 'Pretendard', '맑은 고딕', 'malgun gothic', Arial, sans-serif;
+  background-color: var(--background_color);
+  @include modeTransition();
+}
+
+#app {
+  width: inherit;
+  height: inherit;
+}
+
+.emergency {
+  background-color: var(--emergency-bg-color) !important;
+}

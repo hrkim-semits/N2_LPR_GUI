@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  height: $footer-height;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.95rem !important;
+  box-sizing: border-box;
+  border-top: 1px solid var(--border-color) !important;
+  position: relative;
+  background-color: var(--bg-color);
+  @include modeTransition();
+
+
+  span {
+    display: block;
+    padding: 0.39rem 0;
+    color: var(--text-disabled);
+  }
+
+  .footerText {
+    font-size: $pxToRem12;
+    display: inline-block;
+    max-width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .copyright {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,86 @@
+$light-mode-logo-url: url('../../../public/ci_logo_img01.png');
+$light-mode-icon-url: url('../../../public/icon_sun.png');
+$dark-mode-logo-url: url('../../../public/ci_logo_img02.png');
+$dark-mode-icon-url: url('../../../public/icon_moon.png');
+
+:root {
+  --bg-color: #f8f9fa;
+  --bg-light: #fff;
+
+  --text-primary: #333;
+  --text-secondary: #6B7785;
+  --text-disabled: #C9CDD4;
+
+  --border-color: #e5e6eb;
+
+  --emergency-btn-background: -webkit-radial-gradient(center 50px, circle farthest-corner, #f77234, #CB272D 100%);
+  --emergency-btn-shadow: 0 0.78rem 0 rgb(185, 2, 2), 0 1.46rem 1.95rem rgba(0,0,0,.35);
+  --emergency-btn-text-color: #fff;
+
+  --emergency-bg-color: #F98981;
+
+  --dark-elevation-black-1: rgba(0, 0, 0, 0.08);
+
+  --modal-bg-color: var(--bg-color); 
+
+  .emergency {
+    --bg-light: #ff9c95;
+    --bg-color: var(--emergency-bg-color);
+    --border-color: #fcada8;
+  }
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --bg-light: var(--dark-elevation-4);
+
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --text-disabled: rgba(255, 255, 255, 0.38);
+
+  --dark-elevation-1: rgba(255, 255, 255, 0.05);
+  --dark-elevation-black-1: rgba(0, 0, 0, 0.95);
+  --dark-elevation-2: rgba(255, 255, 255, 0.07);
+  --dark-elevation-black-2: rgba(0, 0, 0, 0.93);
+  --dark-elevation-3: rgba(255, 255, 255, 0.08);
+  --dark-elevation-black-3: rgba(0, 0, 0, 0.92);
+  --dark-elevation-4: rgba(255, 255, 255, 0.09);
+  --dark-elevation-black-4: rgba(0, 0, 0, 0.91);
+  --dark-elevation-5: rgba(255, 255, 255, 0.11);
+  --dark-elevation-black-5: rgba(0, 0, 0, 0.99);
+  --dark-elevation-6: rgba(255, 255, 255, 0.12);
+  --dark-elevation-black-6: rgba(0, 0, 0, 0.88);
+  --dark-elevation-7: rgba(255, 255, 255, 0.14);
+  --dark-elevation-black-7: rgba(0, 0, 0, 0.86);
+  --dark-elevation-8: rgba(255, 255, 255, 0.15); 
+  --dark-elevation-black-8: rgba(0, 0, 0, 0.85); 
+  --dark-elevation-9: rgba(255, 255, 255, 0.16);
+  --dark-elevation-black-9: rgba(0, 0, 0, 0.84);
+
+  --border-color: var(--bg-light);
+
+  --emergency-btn-background: -webkit-radial-gradient(center 50px, circle farthest-corner, #CC5729, #CB2E34 100%);
+  --emergency-btn-shadow: 0 0.78rem 0 rgb(130, 0, 0), 0 1.46rem 1.95rem rgba(0,0,0,.35);
+  --emergency-btn-text-color: var(--text-primary);
+
+  --emergency-bg-color: #F98D86;
+
+  --modal-bg-color: var(--dark-elevation-black-9);
+  
+  .companyLogo {
+    background-image: $dark-mode-logo-url;
+  }
+
+  .modeToggleButton:after {
+    background-image: $dark-mode-icon-url !important;
+  }
+
+  .port {
+    background-color: var(--dark-elevation-1);
+  }
+
+  .separatedValue, .valueArea {
+    background-color: var(--dark-elevation-1) !important;
+    border: 1px solid var(--dark-elevation-1);
+  }
+}

@@ -1,0 +1,122 @@
+- UI에서 표현해야 할 데이터 형식
+{
+    "MessageID": "SingalDCSMsgPurgeInfoNtf",
+    "MessageData": {
+        "Flow": "201",
+        "Pressure": "201",
+        "Humidity": "201",
+        "Temperature": "-55",
+        "BaseTime": ""
+    }
+}
+
+
+
+- Zone 정보
+'MessageID': 'SingalDCSMsgZoneLPRPurgeAttributes',
+    'MessageData': {
+      'Object': {
+        'ZoneID': '11110010',
+        'Flow1': '83',
+        'Flow2': '41',
+        'Flow3': '42',
+        'Pressure': '7',
+        'Humidity': '12',
+        'Temperature': '0'
+      },
+      'BaseTime': ''
+    }
+ 
+
+
+- Purge Req (GUI -> server)
+- 이 값으로 동작하라는 의미. 단위는 아직 모름. 40, 70, 100 이런 식으로 쓸거 같음
+
+{
+    "MessageID": "SingalGUIMsgPurgeReq",
+    "MessageData": {
+        "TargetFlow": "0",
+        "BaseTime": ""
+    }
+}
+
+
+
+- Purge Rsp (server -> GUI)
+- ui에서 서버한테 요청한 후, 받는 응답
+- 성공 여부, 설정한 값 확인
+{
+    "MessageID": "SingalGUIMsgPurgeRsp",
+    "MessageData": {
+        "TargetFlowResult": "0",
+        "BaseTime": ""
+    }
+}
+
+
+
+- 로그인 기능에 사용
+{
+    "MessageID": "SingalMsgInitializeRsp",
+    "MessageData": {
+        "Result": "-1",
+        "SessionUsage": "0",
+        "SessionID": "-1",
+        "SessionKey": "",
+        "BaseTime": ""
+    }
+}
+
+
+
+- 로그인 요청 메시지
+{
+    "MessageID": "SingalMsgLoginReq",
+    "MessageData": {
+        "UserID": "",
+        "UserPassword": "",
+        "UserIDType": "0",
+        "UserPasswordType": "0",
+        "BaseTime": ""
+    }
+}
+
+
+
+- 로그인 요청 응답
+{
+    "MessageID": "SingalMsgLoginRsp",
+    "MessageData": {
+        "Result": "0",
+        "Reason": "0",
+        "UserID": "",
+        "SessionInfo1": "",
+        "SessionInfo2": "",
+        "BaseTime": ""
+    }
+}
+
+
+
+- 로그아웃 안하고 그냥 껐을 때, 또는 앱(?) 같은거 쓸 때 자동 로그인 기능
+{
+    "MessageID": "SingalMsgReloginReq",
+    "MessageData": {
+        "SessionKey": "",
+        "SessionInfo1": "",
+        "SessionInfo2": "",
+        "BaseTime": ""
+    }
+}
+
+
+
+- 자동 로그인 응답
+{
+    "MessageID": "SingalMsgReloginRsp",
+    "MessageData": {
+        "Result": "0",
+        "UserID": "",
+        "BaseTime": ""
+    }
+}

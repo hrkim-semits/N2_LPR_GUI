@@ -1,0 +1,31 @@
+.errorPage {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: $pxToRem10;
+  align-items: center;
+  background-color: var(--bg-color);
+  @include modeTransition();
+
+  p {
+    color: var(--text-primary);
+    font: {
+      size: $pxToRem18;
+      font-weight: 700;
+    }
+  }
+
+  .goHomeButton {
+    color: #fff;
+    background-color: $semi-ts-dark-blue;
+    width: 8%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $pxToRem14;
+    border-radius: 4px;
+  }
+}

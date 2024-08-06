@@ -1,0 +1,6 @@
+// 공통 스타일 믹스인을 정의합니다.
+@charset "utf-8";
+
+@mixin modeTransition() {
+  transition: all 0.25s;
+}

@@ -1,0 +1,24 @@
+[2024-07-31_15:22:23.280479][41572] BnD::B1WebSocketReadWriteImpl: read failed: reason[10053], message[현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다]
+[2024-07-31_15:22:23.280479][41572] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[4], previous_status:[2], reason[10053]
+[2024-07-31_15:22:23.937968][42680] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[4], previous_status:[3], reason[10053]
+[2024-07-31_15:22:23.937968][42680] SemiTS::LPRWASWebSocketServerSession: server session disconnected: sessionHandleID[4], peerAddress[127.0.0.1], localPort[22001], reason[10053]
+[2024-07-31_15:22:25.477756][38668] SemiTS::WebAssistantServiceMFC: stopping [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-07-31_15:22:25.477756][36712] BnD::B1Acceptor: closing acceptor
+[2024-07-31_15:22:25.477756][41572] SemiTS::LPRWASWebServer: accept error: peerAddress[], localPort[0], reason[995]
+[2024-07-31_15:22:25.603295][36712] BnD::B1Acceptor: acceptor closed
+[2024-07-31_15:22:26.058564][36712] BnD::B1RedisDirectClientSubscribeSession: disconnect called: sessionHandleID[2]
+[2024-07-31_15:22:26.058564][36712] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-07-31_15:22:26.058564][30564] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-07-31_15:22:26.058564][36712] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-07-31_15:22:26.058564][30564] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[2], previous_status:[2], reason[995]
+[2024-07-31_15:22:26.058564][16952] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-07-31_15:22:26.058564][36712] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[2], previous_status:[3], reason[995]
+[2024-07-31_15:22:26.058564][16952] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-07-31_15:22:26.058564][36712] BnD::B1RedisDirectClientSubscribeSession: session disconnected
+[2024-07-31_15:22:26.058564][11864] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-07-31_15:22:26.058564][11864] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-07-31_15:22:26.090202][36712] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-07-31_15:22:26.090202][36712] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-07-31_15:22:26.121452][36712] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-07-31_15:22:26.121452][36712] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-07-31_15:22:26.152702][36712] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] stopped
