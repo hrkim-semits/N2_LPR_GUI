@@ -1,3 +1,16 @@
+// rem
+$wrapperWidth: 73.8rem;
+$msgAreaWidth: 16.8rem;
+$setAreaWidth: 22.86rem;
+$seperateTextWidth: 0.4rem;
+$applyButtonWidth: 7rem;
+$inputRangeWidth: 12.6rem;
+$inputNumberAreaWidth: 6.79rem;
+$outerGap: calc(calc($wrapperWidth - $msgAreaWidth - $setAreaWidth - $seperateTextWidth - $setAreaWidth - $applyButtonWidth) / 4);
+$setAreaInnerGap: calc(calc($setAreaWidth - $inputRangeWidth - $inputNumberAreaWidth) / 4);
+$frontTextPositionLeft: calc($msgAreaWidth + $outerGap + $setAreaInnerGap + calc($inputRangeWidth / 2));
+$rearTextPositionRight: calc($applyButtonWidth + $outerGap + $setAreaInnerGap + $inputNumberAreaWidth + calc($setAreaInnerGap * 2) + calc($inputRangeWidth / 2));
+
 .settingContents {
   width: 90%;
   padding: 0 5% !important;
@@ -6,8 +19,49 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  gap: 0.97rem;
+  gap: 1%;
   background-color: var(--bg-color);
+
+  .settingHeader {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    .subTitle {
+      font: {
+        size: $pxToRem14;
+        weight: 700;
+      }
+      color: var(--text-primary);
+
+      &:first-child {
+        position: absolute;
+        left: $frontTextPositionLeft;
+        transform: translate(-50%);
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        right: $rearTextPositionRight;
+        transform: translate(50%);
+      }
+    }
+
+    .applyAllButton {
+      height: auto;
+      // border-radius: $pxToRem14;
+      padding: 0.35% 1.2%;
+      font: {
+        size: $pxToRem14;
+        weight: 700;
+      }
+
+      @include button-style-secondary;
+    }
+  }
 
   .settingWrapper {
     width: 100%;
@@ -18,7 +72,6 @@
     align-items: center;
     font: {
       family: 'Poppins', 'Pretendard';
-      weight: 400;
       size: $pxToRem14;
     }
 
@@ -28,14 +81,14 @@
       height: 7%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 0.97rem;
       padding: 0.19rem 0.58rem;
       border-radius: 0.39rem;
       background-color: var(--bg-light);
 
       .msgArea {
-        width: 32%;
-        // width: 35%;
+        width: 24.16%;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -44,18 +97,30 @@
         text-align: center;
         letter-spacing: -.2px;
         color: var(--text-primary);
+        font: {
+          size: $pxToRem14;
+          weight: 700;
+        }
       }
       
       .setArea {
-        width: 50%;
+        width: 32.87%;
         height: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         gap: 0.58rem;
+        
+        .subTitle {
+          font: {
+            size: $pxToRem12;
+            weight: 700;
+          }
+          letter-spacing: -0.25px;
+          color: var(--text-secondary);
+        }
 
         .rangeArea {
-          width: calc(100% - 7.32rem);
           height: 100%;
 
           .displayRange {
@@ -82,18 +147,22 @@
               width: 100%;
               height: 50%;              
               accent-color: $semi-ts_dark_blue;
+              position: relative;
+
+              
             }
           }
         }
 
         .numberArea {
+          width: 29.72%;
           height: 100%;
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
 
           input[type="text"] {
-            width: 4.5rem;
+            width: 4.3rem;
             text-align: end;
             border: 1px solid var(--border-color);
             border-radius: 0.39rem;
@@ -132,31 +201,118 @@
           }
         }
       }
+
+      .sepearateText {
+        color: var(--text-secondary);
+      }
+
+      .setPurgeArea {
+        width: 65.74%;
+        display: flex;
+        align-items: center;
+        gap: 0.58rem;
+
+        .purgeRangeArea {
+          width: 65%;
+          height: 100%;
+          
+          .purgeRangeSliderWrapper {
+            width: 100%;
+            height: 50%;
+
+            input[type="range"] {
+              width: 100%;
+              height: 50%;              
+              accent-color: $semi-ts_dark_blue;
+            }
+          }
+
+          .displayRange {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            letter-spacing: -1px;
+            span {
+              display: block;
+              text-align: center;
+              font-size: $pxToRem10;
+              color: var(--text-secondary);
+            }
+          }
+        }
+
+        .purgeNumberArea {
+          width: 35%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          div {
+
+            input[type="text"] {
+              width: 4.5rem;
+              text-align: end;
+              border: 1px solid var(--border-color);
+              border-radius: 0.39rem;
+              padding: 0.19rem 0.39rem;
+              box-sizing: border-box;
+              background-color: var(--bg-light);
+              color: var(--text-primary);  
+            }
+
+            .PurgeDurationOfMillis {
+              width: 7rem !important;
+            }
+
+            span {
+              margin: 0 0.19rem;
+              font-size: $pxToRem12;
+              color: var(--text-secondary);
+            }
+          }
+        }
+      }
+
+      .setEMOArea {
+        width: 65.74%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        .setStatus {
+          width: 48%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+
+          .TargetStatus {
+            width: 100%;
+            height: 70%;
+            padding: 0.19rem;
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+          }
+        }
+      }
     }
   }
 
   .eachApplyButton {
-    // width: 10%;
-    background-color: $semi-ts_dark_blue;
-    color: #e5e6eb;
     font: {
       size: $pxToRem14;
-      // weight: 700;
     }
 
-    svg {
-      color: #e5e6eb;
-    }
+    @include button-style-primary;
   }
 
   .applyAllButton {
-    // height: 3.12rem;
     background-color: $semi-ts_dark_blue;
     padding: 0 1.46rem;
     color: #e5e6eb;
     font: {
       size: $pxToRem14;
-      // weight: 700;
     }
 
     svg {

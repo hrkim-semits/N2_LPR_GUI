@@ -1,5 +1,7 @@
 .viewArea {
   width: $main-width;
   height: $main-height;
-  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

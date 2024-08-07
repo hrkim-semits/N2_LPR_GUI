@@ -36,15 +36,11 @@
       width: 12.12rem;
       height: 3.12rem;
       padding: 0 1.46rem;
-      background-color: $semi-ts_dark_blue;
-      color: #e5e6eb;
       font: {
         size: $pxToRem14;
       }
 
-      svg {
-        color: #e5e6eb;
-      }
+      @include button-style-primary;
     }
   }
 }

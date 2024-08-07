@@ -1,9 +1,9 @@
 <template>
   <li class="settingRow">
     <div class="msgArea">{{ message }}</div>
-    <div class="setArea half">
-      <div class="rangeArea half">
-        <div class="rangeSliderWrapper">
+    <div class="setPurgeArea">
+      <div class="purgeRangeArea">
+        <div class="purgeRangeSliderWrapper">
           <!-- EMERGENCY STOP 실행시 input disabled -->
           <input type="range" :min="LPMRangeMin" :max="LPMRangeMax" v-model="lpmValue" list="markers" :disabled="isStop">
           <datalist id="markers">
@@ -19,13 +19,17 @@
           <span id="maxLPM">{{ String(LPMRangeMax) }}</span>
         </div>
       </div>
-      <div class="numberArea">
+      <div class="purgeNumberArea">
         <!-- EMERGENCY STOP 실행시 input disabled -->
-        <input class="TargetFlow" type="text" :min="LPMRangeMin" :max="LPMRangeMax" v-model="lpmValue" @input="checkValue" :disabled="isStop">
-        <span class="settingUnit">LPM</span>
-        <!-- 기본값 설정, 정수만 입력 가능 -->
-        <input ref="inputRef" class="PurgeDurationOfMillis" type="text" min="0" v-model="postPurgeMs" @input="inputInt" :disabled="isStop">
-        <span class="settingUnit">ms</span>
+        <div class="flowInputNum">
+          <input class="TargetFlow" type="text" :min="LPMRangeMin" :max="LPMRangeMax" v-model="lpmValue" @input="checkValue" :disabled="isStop">
+          <span class="settingUnit">LPM</span>
+        </div>
+        <div class="durationInputNum">
+          <!-- 기본값 설정, 정수만 입력 가능 -->
+          <input ref="inputRef" class="PurgeDurationOfMillis" type="text" min="0" v-model="postPurgeMs" @input="inputInt" :disabled="isStop">
+          <span class="settingUnit">ms</span>
+        </div>
       </div>
     </div>
     <a-button class="eachApplyButton" :disabled="isStop" @click="sendPostPurgeMessage">

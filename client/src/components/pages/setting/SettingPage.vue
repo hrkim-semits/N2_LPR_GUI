@@ -1,23 +1,27 @@
 <template>
 <section class="settingContents" :class="{'emergency': isStop}"> <!-- or section -->
+  <header class="settingHeader">
+    <span class="subTitle">FRONT</span>
+    <span class="subTitle">REAR</span>
+    <a-button class="applyAllButton" type="primary" :disabled="isStop" @click="handleClick">
+      <template #icon>
+        <icon-select-all />
+      </template>
+      <template #default>Apply all</template>
+    </a-button>
+  </header>
   <ul class="settingWrapper">
     <SetLPMRow v-for="( msg, index ) in messages" :key="index" :message="msg" :isStop="isStop" :LPMRange="LPMRange" :showModal="showModal"></SetLPMRow>
     <PostPurgeRow :message="'Post purge'" :isStop="isStop" :LPMRange="LPMRange" :showModal="showModal"/>
     <EMORow :message="'EMO'" :isStop="isStop"/>
   </ul>
-  <a-button class="applyAllButton" type="primary" :disabled="isStop" @click="handleClick">
-    <template #icon>
-      <icon-select-all />
-    </template>
-    <template #default>Apply all</template>
-  </a-button>
 </section>
 </template>
 
 
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import { IconSelectAll } from '@arco-design/web-vue/es/icon';
 import './SettingPage.scss';
 import { useGlobalStore } from '@/stores/globalStore';
@@ -67,7 +71,7 @@ export default defineComponent({
         min: 0,
         max: 200,
         default: 100,
-        markerStep: 20
+        markerStep: 50
       };
 
     const handleClick = () => {
@@ -76,6 +80,48 @@ export default defineComponent({
 
       globalStore.sendMessage(JSON.stringify(returnWholeSettingInfos()));
     };
+
+    // input[type="text"]를 input[type="number"]처럼 위, 아래 방향키로 제어할 수 있도록 함
+    document.addEventListener('DOMContentLoaded', () => {
+      const textInputs = document.querySelectorAll<HTMLInputElement>('.TargetFlow');
+      const postPurgeInput = document.querySelector<HTMLInputElement>('.PurgeDurationOfMillis');
+
+      const handleArrowKeyInput = (event: KeyboardEvent) => {
+        const target = event.target as HTMLInputElement;
+        console.log(target.className);
+        const currentValue = Number(target.value) || 0;
+
+        const arrowUpEvent = (step :number) => {
+          target.value = (currentValue + step).toString();
+          event.preventDefault();
+        };
+
+        const arrowDownEvent = (step :number) => {
+          target.value = (currentValue - step).toString();
+          event.preventDefault();
+        };
+
+        if (target.className === 'TargetFlow' && event.key === 'ArrowUp' && currentValue >= LPMRange.min && currentValue < LPMRange.max) {
+          arrowUpEvent(1);
+        } else if (target.className === 'TargetFlow' && event.key === 'ArrowDown' && currentValue > LPMRange.min && currentValue <= LPMRange.max) {
+          arrowDownEvent(1);
+        } else if (target.className === 'PurgeDurationOfMillis' && event.key === 'ArrowUp') {
+          arrowUpEvent(1000);
+        } else if (target.className === 'PurgeDurationOfMillis' && event.key === 'ArrowDown' && currentValue > 0) {
+          arrowDownEvent(1000);
+        }
+        ;
+
+        const inputEvent = new Event('input', { bubbles: true });
+        target.dispatchEvent(inputEvent);
+      };
+
+      textInputs.forEach(input => {
+        input.addEventListener('keydown', handleArrowKeyInput);
+      });
+
+      postPurgeInput?.addEventListener('keydown', handleArrowKeyInput);
+    });
 
     return {
       messages,

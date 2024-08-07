@@ -1,12 +1,12 @@
 <template>
   <li class="settingRow">
     <div class="msgArea">{{ message }}</div>
+    <!-- FRONT -->
     <div class="setArea">
+      <!-- <span class="subTitle">FRONT</span> -->
       <div class="rangeArea">
         <div class="rangeSliderWrapper">
-          <!-- EMERGENCY STOP 실행 시 input disabled -->
           <input type="range" :min="LPMRangeMin" :max="LPMRangeMax" v-model="lpmValue" list="markers" :disabled="isStop">
-          <!-- range marker -->
           <datalist id="markers">
             <option
               v-for="value in markerValues"
@@ -22,6 +22,32 @@
       </div>
       <div class="numberArea">
         <!-- EMERGENCY STOP 실행 시 input disabled -->
+        <input class="TargetFlow" type="text" :min="LPMRangeMin" :max="LPMRangeMax" v-model="lpmValue" @input="checkValue" :disabled="isStop">
+        <span class="settingUnit">LPM</span>
+      </div>
+    </div>
+    <span class="sepearateText">|</span>
+    <!-- <span class="sepearateText">/</span> -->
+    <!-- REAR -->
+    <div class="setArea">
+      <!-- <span class="subTitle">REAR</span> -->
+      <div class="rangeArea">
+        <div class="rangeSliderWrapper">
+          <input type="range" :min="LPMRangeMin" :max="LPMRangeMax" v-model="lpmValue" list="markers" :disabled="isStop">
+          <datalist id="markers">
+            <option
+              v-for="value in markerValues"
+              :key="value"
+              :value="value">
+            </option>
+          </datalist>
+        </div>
+        <div class="displayRange">
+          <span id="minLPM">{{ String(LPMRangeMin) }}</span>
+          <span id="maxLPM">{{ String(LPMRangeMax) }}</span>
+        </div>
+      </div>
+      <div class="numberArea">
         <input class="TargetFlow" type="text" :min="LPMRangeMin" :max="LPMRangeMax" v-model="lpmValue" @input="checkValue" :disabled="isStop">
         <span class="settingUnit">LPM</span>
       </div>
@@ -61,6 +87,7 @@ export default defineComponent({
   },
   methods: {
     checkValue(event: Event) {      
+      console.log('[onInput] lpmValue: ', this.lpmValue);
       // console.log(this.lpmValue);
 
       const inputDOM = event.target as HTMLInputElement;
@@ -160,45 +187,9 @@ export default defineComponent({
       }
     }
 
-    // const inputInt = (event: Event) => {
-    //   const target = event.target as HTMLInputElement;
-    //   const value = target.value;
-    //   if (!/^\d*$/.test(value)) {
-    //     postPurgeMs.value = value.replace(/[^\d]/g, '');
-    //   } else {
-    //     postPurgeMs.value = value;
-    //   }
-    // };
-
-    // const checkValue = (event: Event) => {
-    //   const input = event.target as HTMLInputElement;
-    //   let value = parseInt(input.value, 10); // 기본 10진수로 설정
-    //   const regexp = /^\d*.?\d{0,1}$/; // 소수점 이하 한 자리까지 허용하는 정규표현식
-
-    //   const deleteLast = () => {
-    //     input.value = input.value.slice(0, -1);
-    //     // value = parseInt( input.value );
-    //     value = Number(input.value);
-    //   };
-
-    //   if (value < LPMRageMin || value > LPMRageMax) {
-    //     alert( '0~100까지만 입력 가능합니다.' );
-    //     // 범위를 벗어날 경우 입력되지 않도록 함
-    //     deleteLast();
-    //   } 
-      
-    //   if ( !regexp.test(input.value) ) {
-    //     alert( '소수점 한 자리까지만 입력 가능합니다.' );
-    //     // 범위를 벗어날 경우 입력되지 않도록 함
-    //     deleteLast();
-    //   }
-    // };
-
     return {
       lpmValue,
       postPurgeMs,
-      // checkValue,
-      // inputInt,
       LPMRangeMin,
       LPMRangeMax,
       LPMRangeDefault,

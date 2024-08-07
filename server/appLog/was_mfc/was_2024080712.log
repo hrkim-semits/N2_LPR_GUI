@@ -1,0 +1,8 @@
+[2024-08-07_12:02:02.599697][32720] BnD::B1WebSocketReadWriteImpl: read failed: reason[10054], message[현재 연결은 원격 호스트에 의해 강제로 끊겼습니다]
+[2024-08-07_12:02:02.599697][32720] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[2], previous_status:[2], reason[10054]
+[2024-08-07_12:02:02.787594][34360] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[2], previous_status:[3], reason[10054]
+[2024-08-07_12:02:02.787594][34360] SemiTS::LPRWASWebSocketServerSession: server session disconnected: sessionHandleID[2], peerAddress[127.0.0.1], localPort[22001], reason[10054]
+[2024-08-07_12:02:08.857533][32720] SemiTS::WASWebServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-07_12:02:08.857533][32720] BnD::B1HttpServerSessionManager: session modified: sessionHandleID[0]
+[2024-08-07_12:02:08.857533][32720] SemiTS::LPRWASWebSocketServerSession: web socket accepted: peerAddress[127.0.0.1], localPort[22001]
+[2024-08-07_12:02:08.857533][32720] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]

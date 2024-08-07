@@ -4,3 +4,25 @@
 @mixin modeTransition() {
   transition: all 0.25s;
 }
+
+@mixin button-style-primary() {
+  background-color: $semi-ts-dark-blue;
+  // color: #e5e6eb;
+  color: #fff;
+  color: #fff;
+
+  svg {
+    color: #fff;
+  }
+}
+
+@mixin button-style-secondary() {
+  background-color: var(--bg-light);
+  color: $semi-ts-dark-blue;
+  border: 1px solid $semi-ts-dark-blue;
+  box-sizing: border-box;
+
+  svg {
+    color: $semi-ts-dark-blue;
+  }
+}

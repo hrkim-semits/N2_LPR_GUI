@@ -1,7 +1,7 @@
 <template>
   <li class="settingRow">
     <div class="msgArea">{{ message }}</div>
-    <div class="setArea">
+    <div class="setEMOArea">
       <div class="setStatus">
         <select class="TargetStatus" :disabled="isStop">
           <option>1</option>
@@ -31,9 +31,8 @@
 
 
 
-
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
+import { defineComponent } from 'vue';
 import { useGlobalStore } from '@/stores/globalStore';
 
 export default defineComponent({
