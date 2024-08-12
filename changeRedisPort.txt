@@ -1,0 +1,5 @@
+1. redis.conf 파일의 port 설정 변경
+2. cmd 관리자 권한으로 실행
+3. redis 설치 위치에서
+redis-server.exe redis.conf
+로 실행

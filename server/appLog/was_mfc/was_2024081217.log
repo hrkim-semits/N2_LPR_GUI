@@ -1,0 +1,2 @@
+[2024-08-12_16:59:59.858194][34236] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[2], previous_status:[3], reason[995]
+[2024-08-12_16:59:59.858194][34236] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[4], previous_status:[3], reason[995]

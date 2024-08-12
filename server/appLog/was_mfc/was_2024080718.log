@@ -1,0 +1,79 @@
+[2024-08-07_18:02:38.278542][19052] SemiTS::WebAssistantServiceMFC: connecting Administration Service for find equipment type...
+[2024-08-07_18:02:38.278542][19052] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-07_18:02:38.278542][19052] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-07_18:02:38.302570][19052] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-07_18:02:38.302570][19052] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-07_18:02:38.302570][34636] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-07_18:02:38.302570][34636] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-07_18:02:38.319782][20724] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-07_18:02:38.320501][20724] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-07_18:02:38.485922][16968] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-07_18:02:38.485922][16968] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-07_18:02:38.486888][20724] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-07_18:02:38.502510][19052] SemiTS::WebAssistantServiceMFC: Sync server time:[2024-08-07 18:02:39.299]
+[2024-08-07_18:02:39.299829][19052] SemiTS::WebAssistantServiceMFC: Sync server time finished
+[2024-08-07_18:02:39.301527][19052] SemiTS::WebAssistantServiceMFC: find product type done! disconnecting Administration Service: site[1001], type[1001]
+[2024-08-07_18:02:39.500168][19052] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-07_18:02:39.500168][19052] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-07_18:02:39.500168][19052] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-07_18:02:39.500168][19052] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-07_18:02:39.501175][34636] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-07_18:02:39.501175][34636] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-07_18:02:39.501175][20724] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-07_18:02:39.501175][20724] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-07_18:02:40.515174][19052] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-07_18:02:40.515174][19052] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-07_18:02:40.533963][19052] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-07_18:02:40.533963][19052] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-07_18:02:40.565361][19052] SemiTS::WebAssistantServiceMFC: starting [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-07_18:02:40.566289][19052] SemiTS::LPRWebAssistantServicePublic: Connecting [20.20.0.152:9379(0)]
+[2024-08-07_18:02:40.566289][19052] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-07_18:02:40.566289][19052] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-07_18:02:40.583239][19052] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-07_18:02:40.583239][19052] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-07_18:02:40.583239][11932] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-07_18:02:40.583239][11932] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-07_18:02:40.599834][19052] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTING: sessionHandleID[2], previous_status:[-1]
+[2024-08-07_18:02:40.599834][19052] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-07_18:02:40.600835][10204] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-07_18:02:40.601468][10204] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-07_18:02:40.617227][32804] BnD::B1RedisDirectClientSubscribeSession: session connected -> clear buffer
+[2024-08-07_18:02:40.617876][32804] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTED: sessionHandleID[2], previous_status:[1]
+[2024-08-07_18:02:40.777759][18920] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-07_18:02:40.777759][18920] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-07_18:02:40.778797][10204] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-07_18:02:40.778797][18920] BnD::B1RedisDirectClientSubscribeSession: selecting redis db: db[0]
+[2024-08-07_18:02:40.798765][19052] SemiTS::LPRWASWebServer: begin accept: port[22001]
+[2024-08-07_18:02:40.841276][19052] SemiTS::LPRWebAssistantServicePublic: initializing performance check: tick[281]
+[2024-08-07_18:02:40.841276][19052] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] started
+[2024-08-07_18:02:41.530333][2020] SemiTS::WASWebServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-07_18:02:41.530333][2020] BnD::B1HttpServerSessionManager: session modified: sessionHandleID[0]
+[2024-08-07_18:02:41.531335][2020] SemiTS::LPRWASWebSocketServerSession: web socket accepted: peerAddress[127.0.0.1], localPort[22001]
+[2024-08-07_18:02:41.531335][2020] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-07_18:11:00.556049][2020] BnD::B1WebSocketReadWriteImpl: read failed: reason[10053], message[현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다]
+[2024-08-07_18:11:00.556049][2020] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[10053]
+[2024-08-07_18:11:01.453620][18460] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[10053]
+[2024-08-07_18:11:01.453620][18460] SemiTS::LPRWASWebSocketServerSession: server session disconnected: sessionHandleID[0], peerAddress[127.0.0.1], localPort[22001], reason[10053]
+[2024-08-07_18:12:12.635787][34408] SemiTS::WebAssistantServiceMFC: stopping [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-07_18:12:12.635787][19052] BnD::B1Acceptor: closing acceptor
+[2024-08-07_18:12:12.635787][2020] SemiTS::LPRWASWebServer: accept error: peerAddress[], localPort[0], reason[995]
+[2024-08-07_18:12:12.752731][19052] BnD::B1Acceptor: acceptor closed
+[2024-08-07_18:12:12.951000][19052] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-07_18:12:12.951000][19052] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-07_18:12:12.951000][19052] BnD::B1RedisDirectClientSubscribeSession: disconnect called: sessionHandleID[2]
+[2024-08-07_18:12:12.951000][19052] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-07_18:12:12.951000][19052] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-07_18:12:12.951000][19052] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[2]
+[2024-08-07_18:12:12.951000][11932] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-07_18:12:12.951000][11932] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-07_18:12:12.951000][10204] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-07_18:12:12.951000][10204] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-07_18:12:12.951000][32804] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-07_18:12:12.951000][32804] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[2], previous_status:[2], reason[995]
+[2024-08-07_18:12:13.953500][19052] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-07_18:12:13.953500][19052] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-07_18:12:13.971175][19052] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-07_18:12:13.971175][19052] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-07_18:12:13.987209][19052] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[2], previous_status:[3], reason[995]
+[2024-08-07_18:12:13.987209][19052] BnD::B1RedisDirectClientSubscribeSession: session disconnected
+[2024-08-07_18:12:14.002915][19052] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] stopped

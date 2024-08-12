@@ -1,0 +1,537 @@
+[2024-08-05_18:03:40.057184][1892] SemiTS::WebAssistantServiceMFC: connecting Administration Service for find equipment type...
+[2024-08-05_18:03:40.058497][1892] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:03:40.058845][1892] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:03:40.101074][1892] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:03:40.101074][1892] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:03:40.101074][30580] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:03:40.101074][30580] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:03:40.116245][15884] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:03:40.116245][15884] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:03:40.273480][31448] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:03:40.273480][15884] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:03:40.273480][31448] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:03:40.289061][1892] SemiTS::WebAssistantServiceMFC: Sync server time:[2024-08-05 18:03:40.296]
+[2024-08-05_18:03:40.296285][1892] SemiTS::WebAssistantServiceMFC: Sync server time finished
+[2024-08-05_18:03:40.296285][1892] SemiTS::WebAssistantServiceMFC: find product type done! disconnecting Administration Service: site[1001], type[1001]
+[2024-08-05_18:03:40.500307][1892] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:03:40.500307][1892] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:03:40.500307][1892] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-05_18:03:40.500307][1892] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:03:40.500307][15884] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:03:40.500307][30580] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:03:40.500307][15884] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:03:40.500307][30580] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:03:41.506666][1892] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:03:41.506666][1892] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:03:41.522543][1892] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:03:41.522543][1892] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:03:41.554668][1892] SemiTS::WebAssistantServiceMFC: starting [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:03:41.554668][1892] SemiTS::LPRWebAssistantServicePublic: Connecting [20.20.0.152:9379(0)]
+[2024-08-05_18:03:41.554668][1892] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:03:41.554668][1892] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:03:41.570165][1892] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:03:41.570165][1892] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:03:41.571214][21636] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:03:41.571342][21636] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:03:41.585586][1892] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTING: sessionHandleID[2], previous_status:[-1]
+[2024-08-05_18:03:41.585586][1892] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:03:41.587343][7128] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:03:41.587343][7128] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:03:41.601471][28416] BnD::B1RedisDirectClientSubscribeSession: session connected -> clear buffer
+[2024-08-05_18:03:41.601975][28416] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTED: sessionHandleID[2], previous_status:[1]
+[2024-08-05_18:03:41.759393][2376] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:03:41.759393][7128] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:03:41.759393][2376] BnD::B1RedisDirectClientSubscribeSession: selecting redis db: db[0]
+[2024-08-05_18:03:41.759393][2376] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:03:41.775029][1892] SemiTS::LPRWASWebServer: begin accept: port[22001]
+[2024-08-05_18:03:41.806377][1892] SemiTS::LPRWebAssistantServicePublic: initializing performance check: tick[250]
+[2024-08-05_18:03:41.806377][1892] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] started
+[2024-08-05_18:03:42.105495][13616] SemiTS::WASWebServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:03:42.105495][13616] BnD::B1HttpServerSessionManager: session modified: sessionHandleID[0]
+[2024-08-05_18:03:42.105495][13616] SemiTS::LPRWASWebSocketServerSession: web socket accepted: peerAddress[127.0.0.1], localPort[22001]
+[2024-08-05_18:03:42.105495][13616] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:03:45.622359][30624] SemiTS::WebAssistantServiceMFC: stopping [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:03:45.622359][1892] BnD::B1Acceptor: closing acceptor
+[2024-08-05_18:03:45.622359][13616] SemiTS::LPRWASWebServer: accept error: peerAddress[], localPort[0], reason[995]
+[2024-08-05_18:03:45.732486][1892] BnD::B1Acceptor: acceptor closed
+[2024-08-05_18:03:45.826806][1892] SemiTS::LPRWASWebSocketServerSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:03:45.826806][1892] BnD::B1HttpServerSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:03:45.826806][13616] BnD::B1WebSocketReadWriteImpl: read failed: reason[1236], message[네트워크 연결이 로컬 시스템에 의해 취소되었습니다]
+[2024-08-05_18:03:45.826806][13616] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[1236]
+[2024-08-05_18:03:46.833783][1892] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[1236]
+[2024-08-05_18:03:46.833783][1892] SemiTS::LPRWASWebSocketServerSession: server session disconnected: sessionHandleID[0], peerAddress[], localPort[0], reason[1236]
+[2024-08-05_18:03:46.833783][1892] BnD::B1HttpServerSessionManager: reserveRemoveSession requested. but manager is not alived
+[2024-08-05_18:03:47.100286][1892] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:03:47.100286][1892] BnD::B1RedisDirectClientSubscribeSession: disconnect called: sessionHandleID[2]
+[2024-08-05_18:03:47.100286][1892] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:03:47.100286][1892] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-05_18:03:47.100286][7128] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:03:47.100286][1892] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[2]
+[2024-08-05_18:03:47.100286][28416] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:03:47.100286][7128] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:03:47.100286][21636] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:03:47.100286][1892] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:03:47.100286][28416] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[2], previous_status:[2], reason[995]
+[2024-08-05_18:03:47.100286][21636] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:03:48.106581][1892] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:03:48.106581][1892] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:03:48.138220][1892] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[2], previous_status:[3], reason[995]
+[2024-08-05_18:03:48.138220][1892] BnD::B1RedisDirectClientSubscribeSession: session disconnected
+[2024-08-05_18:03:48.169595][1892] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:03:48.169595][1892] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:03:48.200725][1892] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] stopped
+[2024-08-05_18:04:40.589559][9560] SemiTS::WebAssistantServiceMFC: connecting Administration Service for find equipment type...
+[2024-08-05_18:04:40.590075][9560] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:04:40.590137][9560] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:40.617984][9560] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:04:40.617984][9560] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:40.617984][14844] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:04:40.617984][14844] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:04:40.633614][29712] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:04:40.633614][29712] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:04:40.790771][28264] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:04:40.790771][28264] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:04:40.790771][29712] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:04:40.806780][9560] SemiTS::WebAssistantServiceMFC: Sync server time:[2024-08-05 18:04:40.808]
+[2024-08-05_18:04:40.808191][9560] SemiTS::WebAssistantServiceMFC: Sync server time finished
+[2024-08-05_18:04:40.808191][9560] SemiTS::WebAssistantServiceMFC: find product type done! disconnecting Administration Service: site[1001], type[1001]
+[2024-08-05_18:04:41.011966][9560] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:04:41.011966][9560] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:04:41.011966][9560] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:04:41.011966][9560] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-05_18:04:41.011966][14844] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:04:41.011966][14844] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:04:41.011966][29712] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:04:41.011966][29712] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:04:42.019329][9560] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:04:42.019329][9560] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:04:42.050615][9560] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:04:42.050615][9560] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:04:42.081832][9560] SemiTS::WebAssistantServiceMFC: starting [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:04:42.081832][9560] SemiTS::LPRWebAssistantServicePublic: Connecting [20.20.0.152:9379(0)]
+[2024-08-05_18:04:42.081832][9560] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:04:42.081832][9560] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:42.097460][9560] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:04:42.097460][9560] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:42.097460][5924] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:04:42.097460][5924] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:04:42.129101][9560] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTING: sessionHandleID[2], previous_status:[-1]
+[2024-08-05_18:04:42.129101][9560] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:42.129101][6856] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:04:42.129101][6856] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:04:42.145348][28340] BnD::B1RedisDirectClientSubscribeSession: session connected -> clear buffer
+[2024-08-05_18:04:42.145348][28340] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTED: sessionHandleID[2], previous_status:[1]
+[2024-08-05_18:04:42.286541][24128] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:04:42.286541][24128] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:04:42.286541][6856] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:04:42.286541][24128] BnD::B1RedisDirectClientSubscribeSession: selecting redis db: db[0]
+[2024-08-05_18:04:42.305556][9560] SemiTS::LPRWASWebServer: begin accept: port[22001]
+[2024-08-05_18:04:42.333834][9560] SemiTS::LPRWebAssistantServicePublic: initializing performance check: tick[265]
+[2024-08-05_18:04:42.333834][9560] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] started
+[2024-08-05_18:04:47.209689][27024] SemiTS::WASWebServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:04:47.209689][27024] BnD::B1HttpServerSessionManager: session modified: sessionHandleID[0]
+[2024-08-05_18:04:47.209689][27024] SemiTS::LPRWASWebSocketServerSession: web socket accepted: peerAddress[127.0.0.1], localPort[22001]
+[2024-08-05_18:04:47.209689][27024] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:04:49.167818][30624] SemiTS::WebAssistantServiceMFC: stopping [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:04:49.167818][9560] BnD::B1Acceptor: closing acceptor
+[2024-08-05_18:04:49.167818][27024] SemiTS::LPRWASWebServer: accept error: peerAddress[], localPort[0], reason[995]
+[2024-08-05_18:04:49.277020][9560] BnD::B1Acceptor: acceptor closed
+[2024-08-05_18:04:49.354877][9560] SemiTS::LPRWASWebSocketServerSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:04:49.355031][9560] BnD::B1HttpServerSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:04:49.355031][27024] BnD::B1WebSocketReadWriteImpl: read failed: reason[1236], message[네트워크 연결이 로컬 시스템에 의해 취소되었습니다]
+[2024-08-05_18:04:49.355031][27024] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[1236]
+[2024-08-05_18:04:50.360000][9560] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[1236]
+[2024-08-05_18:04:50.360000][9560] SemiTS::LPRWASWebSocketServerSession: server session disconnected: sessionHandleID[0], peerAddress[], localPort[0], reason[1236]
+[2024-08-05_18:04:50.360000][9560] BnD::B1HttpServerSessionManager: reserveRemoveSession requested. but manager is not alived
+[2024-08-05_18:04:50.485703][9560] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:04:50.485703][9560] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:04:50.485703][9560] BnD::B1RedisDirectClientSubscribeSession: disconnect called: sessionHandleID[2]
+[2024-08-05_18:04:50.485703][9560] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:04:50.485703][9560] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-05_18:04:50.485703][9560] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[2]
+[2024-08-05_18:04:50.485703][5924] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:04:50.485703][6856] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:04:50.485703][28340] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:04:50.485703][5924] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:04:50.485703][6856] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:04:50.485703][28340] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[2], previous_status:[2], reason[995]
+[2024-08-05_18:04:51.492965][9560] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:04:51.492965][9560] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:04:51.524598][9560] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:04:51.524598][9560] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:04:51.540227][9560] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[2], previous_status:[3], reason[995]
+[2024-08-05_18:04:51.540227][9560] BnD::B1RedisDirectClientSubscribeSession: session disconnected
+[2024-08-05_18:04:51.555946][9560] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] stopped
+[2024-08-05_18:04:56.205093][30832] SemiTS::WebAssistantServiceMFC: connecting Administration Service for find equipment type...
+[2024-08-05_18:04:56.205093][30832] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:04:56.205093][30832] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:56.230234][30832] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:04:56.230234][30832] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:56.230234][29936] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:04:56.230234][29936] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:04:56.249997][11720] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:04:56.249997][11720] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:04:56.407033][14344] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:04:56.407033][14344] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:04:56.407033][11720] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:04:56.422606][30832] SemiTS::WebAssistantServiceMFC: Sync server time:[2024-08-05 18:04:56.423]
+[2024-08-05_18:04:56.423002][30832] SemiTS::WebAssistantServiceMFC: Sync server time finished
+[2024-08-05_18:04:56.423002][30832] SemiTS::WebAssistantServiceMFC: find product type done! disconnecting Administration Service: site[1001], type[1001]
+[2024-08-05_18:04:56.627604][30832] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:04:56.627604][30832] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:04:56.627604][30832] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:04:56.627604][30832] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-05_18:04:56.627604][29936] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:04:56.627604][29936] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:04:56.627604][11720] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:04:56.627604][11720] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:04:57.633186][30832] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:04:57.633186][30832] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:04:57.664854][30832] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:04:57.664854][30832] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:04:57.696141][30832] SemiTS::WebAssistantServiceMFC: starting [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:04:57.696141][30832] SemiTS::LPRWebAssistantServicePublic: Connecting [20.20.0.152:9379(0)]
+[2024-08-05_18:04:57.696141][30832] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:04:57.696141][30832] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:57.711731][30832] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:04:57.711731][30832] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:57.711731][14652] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:04:57.711731][14652] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:04:57.727356][30832] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTING: sessionHandleID[2], previous_status:[-1]
+[2024-08-05_18:04:57.727356][30832] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:04:57.733906][18344] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:04:57.733906][18344] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:04:57.743410][30096] BnD::B1RedisDirectClientSubscribeSession: session connected -> clear buffer
+[2024-08-05_18:04:57.743410][30096] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTED: sessionHandleID[2], previous_status:[1]
+[2024-08-05_18:04:57.899790][30032] BnD::B1RedisDirectClientSubscribeSession: selecting redis db: db[0]
+[2024-08-05_18:04:57.899790][30032] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:04:57.899790][18344] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:04:57.899790][30032] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:04:57.915390][30832] SemiTS::LPRWASWebServer: begin accept: port[22001]
+[2024-08-05_18:04:57.947099][30832] SemiTS::LPRWebAssistantServicePublic: initializing performance check: tick[250]
+[2024-08-05_18:04:57.947099][30832] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] started
+[2024-08-05_18:05:01.436962][7224] SemiTS::WASWebServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:05:01.436962][7224] BnD::B1HttpServerSessionManager: session modified: sessionHandleID[0]
+[2024-08-05_18:05:01.436962][7224] SemiTS::LPRWASWebSocketServerSession: web socket accepted: peerAddress[127.0.0.1], localPort[22001]
+[2024-08-05_18:05:01.436962][7224] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:06:01.283312][30624] SemiTS::WebAssistantServiceMFC: stopping [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:06:01.283312][30832] BnD::B1Acceptor: closing acceptor
+[2024-08-05_18:06:01.283312][7224] SemiTS::LPRWASWebServer: accept error: peerAddress[], localPort[0], reason[995]
+[2024-08-05_18:06:01.392189][30832] BnD::B1Acceptor: acceptor closed
+[2024-08-05_18:06:01.439406][30832] SemiTS::LPRWASWebSocketServerSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:06:01.439406][30832] BnD::B1HttpServerSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:06:01.439406][7224] BnD::B1WebSocketReadWriteImpl: read failed: reason[1236], message[네트워크 연결이 로컬 시스템에 의해 취소되었습니다]
+[2024-08-05_18:06:01.439406][7224] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[1236]
+[2024-08-05_18:06:02.442822][30832] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[1236]
+[2024-08-05_18:06:02.442822][30832] SemiTS::LPRWASWebSocketServerSession: server session disconnected: sessionHandleID[0], peerAddress[], localPort[0], reason[1236]
+[2024-08-05_18:06:02.442822][30832] BnD::B1HttpServerSessionManager: reserveRemoveSession requested. but manager is not alived
+[2024-08-05_18:06:02.552618][30832] BnD::B1RedisDirectClientSubscribeSession: disconnect called: sessionHandleID[2]
+[2024-08-05_18:06:02.552715][30832] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:06:02.552715][30832] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:06:02.552715][30096] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:06:02.552715][18344] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:06:02.552715][30832] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[2]
+[2024-08-05_18:06:02.552715][14652] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:06:02.552715][30096] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[2], previous_status:[2], reason[995]
+[2024-08-05_18:06:02.552715][18344] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:06:02.552715][30832] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-05_18:06:02.552715][14652] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:06:02.552715][30832] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:06:03.559619][30832] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[2], previous_status:[3], reason[995]
+[2024-08-05_18:06:03.559722][30832] BnD::B1RedisDirectClientSubscribeSession: session disconnected
+[2024-08-05_18:06:03.591222][30832] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:06:03.591222][30832] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:06:03.606846][30832] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:06:03.606846][30832] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:06:03.638539][30832] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] stopped
+[2024-08-05_18:07:04.211748][18336] SemiTS::WebAssistantServiceMFC: connecting Administration Service for find equipment type...
+[2024-08-05_18:07:04.211748][18336] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:07:04.211748][18336] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:07:04.254163][18336] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:07:04.254163][18336] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:07:04.254163][15156] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:07:04.254163][15156] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:07:04.269788][23516] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:07:04.269788][23516] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:07:04.412963][27996] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:07:04.412963][27996] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:07:04.412963][23516] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:07:04.428619][18336] SemiTS::WebAssistantServiceMFC: Sync server time:[2024-08-05 18:07:05.263]
+[2024-08-05_18:07:05.263447][18336] SemiTS::WebAssistantServiceMFC: Sync server time finished
+[2024-08-05_18:07:05.263447][18336] SemiTS::WebAssistantServiceMFC: find product type done! disconnecting Administration Service: site[1001], type[1001]
+[2024-08-05_18:07:05.465909][18336] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:07:05.465909][18336] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:07:05.465909][18336] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:07:05.465909][18336] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-05_18:07:05.465909][23516] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:07:05.465909][23516] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:07:05.465909][15156] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:07:05.465909][15156] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:07:06.468391][18336] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:07:06.468391][18336] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:07:06.484134][18336] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:07:06.484134][18336] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:07:06.499636][18336] SemiTS::WebAssistantServiceMFC: starting [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:07:06.499636][18336] SemiTS::LPRWebAssistantServicePublic: Connecting [20.20.0.152:9379(0)]
+[2024-08-05_18:07:06.499636][18336] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:07:06.499636][18336] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:07:06.515260][18336] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:07:06.515260][18336] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:07:06.515260][2652] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:07:06.515260][2652] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:07:06.547018][18336] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTING: sessionHandleID[2], previous_status:[-1]
+[2024-08-05_18:07:06.547018][18336] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:07:06.547521][30856] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:07:06.547521][30856] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:07:06.578656][7332] BnD::B1RedisDirectClientSubscribeSession: session connected -> clear buffer
+[2024-08-05_18:07:06.578656][7332] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTED: sessionHandleID[2], previous_status:[1]
+[2024-08-05_18:07:06.716772][5108] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:07:06.716772][30856] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:07:06.718290][5108] BnD::B1RedisDirectClientSubscribeSession: selecting redis db: db[0]
+[2024-08-05_18:07:06.718290][5108] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:07:06.733364][18336] SemiTS::LPRWASWebServer: begin accept: port[22001]
+[2024-08-05_18:07:06.766598][18336] SemiTS::LPRWebAssistantServicePublic: initializing performance check: tick[266]
+[2024-08-05_18:07:06.766659][18336] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] started
+[2024-08-05_18:07:09.873741][25004] SemiTS::WASWebServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:07:09.873741][25004] BnD::B1HttpServerSessionManager: session modified: sessionHandleID[0]
+[2024-08-05_18:07:09.873741][25004] SemiTS::LPRWASWebSocketServerSession: web socket accepted: peerAddress[127.0.0.1], localPort[22001]
+[2024-08-05_18:07:09.873741][25004] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:07:12.774051][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"21","Flow2":"27","Flow3":"38","Pressure":"22","Humidity":"58","Temperature":"87"},"BaseTime":""}}
+[2024-08-05_18:07:12.774051][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"49","Flow2":"94","Flow3":"30","Pressure":"47","Humidity":"39","Temperature":"0"},"BaseTime":""}}
+[2024-08-05_18:07:13.872361][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"16","Flow2":"34","Flow3":"53","Pressure":"51","Humidity":"39","Temperature":"21"},"BaseTime":""}}
+[2024-08-05_18:07:13.872361][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"54","Flow2":"53","Flow3":"71","Pressure":"69","Humidity":"67","Temperature":"58"},"BaseTime":""}}
+[2024-08-05_18:07:14.956178][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"12","Flow2":"40","Flow3":"68","Pressure":"73","Humidity":"48","Temperature":"29"},"BaseTime":""}}
+[2024-08-05_18:07:14.956178][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"29","Flow2":"15","Flow3":"27","Pressure":"25","Humidity":"18","Temperature":"13"},"BaseTime":""}}
+[2024-08-05_18:07:16.055555][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"74","Flow2":"76","Flow3":"28","Pressure":"42","Humidity":"79","Temperature":"95"},"BaseTime":""}}
+[2024-08-05_18:07:16.055555][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"30","Flow2":"14","Flow3":"22","Pressure":"79","Humidity":"70","Temperature":"81"},"BaseTime":""}}
+[2024-08-05_18:07:17.140119][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"76","Flow2":"30","Flow3":"67","Pressure":"96","Humidity":"79","Temperature":"0"},"BaseTime":""}}
+[2024-08-05_18:07:17.140119][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"10","Flow2":"4","Flow3":"34","Pressure":"20","Humidity":"52","Temperature":"23"},"BaseTime":""}}
+[2024-08-05_18:07:18.238155][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"66","Flow2":"52","Flow3":"12","Pressure":"83","Humidity":"38","Temperature":"18"},"BaseTime":""}}
+[2024-08-05_18:07:18.238155][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"33","Flow2":"21","Flow3":"19","Pressure":"85","Humidity":"55","Temperature":"87"},"BaseTime":""}}
+[2024-08-05_18:07:19.355608][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"35","Flow2":"32","Flow3":"73","Pressure":"33","Humidity":"18","Temperature":"25"},"BaseTime":""}}
+[2024-08-05_18:07:19.356111][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"13","Flow2":"41","Flow3":"30","Pressure":"41","Humidity":"15","Temperature":"54"},"BaseTime":""}}
+[2024-08-05_18:07:20.439728][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"91","Flow2":"10","Flow3":"66","Pressure":"78","Humidity":"2","Temperature":"13"},"BaseTime":""}}
+[2024-08-05_18:07:20.439728][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"4","Flow2":"18","Flow3":"79","Pressure":"53","Humidity":"13","Temperature":"73"},"BaseTime":""}}
+[2024-08-05_18:07:21.521996][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"88","Flow2":"55","Flow3":"71","Pressure":"55","Humidity":"1","Temperature":"91"},"BaseTime":""}}
+[2024-08-05_18:07:21.521996][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"57","Flow2":"25","Flow3":"77","Pressure":"6","Humidity":"12","Temperature":"26"},"BaseTime":""}}
+[2024-08-05_18:07:22.621755][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"58","Flow2":"38","Flow3":"53","Pressure":"72","Humidity":"47","Temperature":"92"},"BaseTime":""}}
+[2024-08-05_18:07:22.621755][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"85","Flow2":"51","Flow3":"73","Pressure":"76","Humidity":"5","Temperature":"9"},"BaseTime":""}}
+[2024-08-05_18:07:23.722073][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"8","Flow2":"22","Flow3":"26","Pressure":"15","Humidity":"40","Temperature":"7"},"BaseTime":""}}
+[2024-08-05_18:07:23.722073][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"47","Flow2":"26","Flow3":"60","Pressure":"38","Humidity":"88","Temperature":"74"},"BaseTime":""}}
+[2024-08-05_18:07:24.821389][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"85","Flow2":"68","Flow3":"51","Pressure":"95","Humidity":"97","Temperature":"22"},"BaseTime":""}}
+[2024-08-05_18:07:24.821389][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"93","Flow2":"5","Flow3":"6","Pressure":"49","Humidity":"8","Temperature":"57"},"BaseTime":""}}
+[2024-08-05_18:07:25.899299][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"98","Flow2":"42","Flow3":"34","Pressure":"88","Humidity":"33","Temperature":"31"},"BaseTime":""}}
+[2024-08-05_18:07:25.899299][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"0","Flow2":"36","Flow3":"77","Pressure":"41","Humidity":"16","Temperature":"81"},"BaseTime":""}}
+[2024-08-05_18:07:26.989216][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"12","Flow2":"4","Flow3":"88","Pressure":"38","Humidity":"87","Temperature":"16"},"BaseTime":""}}
+[2024-08-05_18:07:26.989216][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"28","Flow2":"99","Flow3":"22","Pressure":"50","Humidity":"65","Temperature":"81"},"BaseTime":""}}
+[2024-08-05_18:07:28.088297][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"76","Flow2":"26","Flow3":"59","Pressure":"37","Humidity":"12","Temperature":"90"},"BaseTime":""}}
+[2024-08-05_18:07:28.088914][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"4","Flow2":"93","Flow3":"16","Pressure":"39","Humidity":"94","Temperature":"33"},"BaseTime":""}}
+[2024-08-05_18:07:29.184217][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"21","Flow2":"49","Flow3":"23","Pressure":"0","Humidity":"44","Temperature":"85"},"BaseTime":""}}
+[2024-08-05_18:07:29.184217][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"63","Flow2":"29","Flow3":"47","Pressure":"19","Humidity":"50","Temperature":"36"},"BaseTime":""}}
+[2024-08-05_18:07:30.234838][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"51","Flow2":"94","Flow3":"78","Pressure":"89","Humidity":"20","Temperature":"99"},"BaseTime":""}}
+[2024-08-05_18:07:30.237024][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"59","Flow2":"25","Flow3":"93","Pressure":"79","Humidity":"9","Temperature":"78"},"BaseTime":""}}
+[2024-08-05_18:07:31.293054][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"42","Flow2":"24","Flow3":"58","Pressure":"64","Humidity":"95","Temperature":"30"},"BaseTime":""}}
+[2024-08-05_18:07:31.293054][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"21","Flow2":"9","Flow3":"3","Pressure":"8","Humidity":"34","Temperature":"96"},"BaseTime":""}}
+[2024-08-05_18:07:32.353088][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"45","Flow2":"46","Flow3":"66","Pressure":"70","Humidity":"10","Temperature":"16"},"BaseTime":""}}
+[2024-08-05_18:07:32.353088][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"50","Flow2":"61","Flow3":"87","Pressure":"18","Humidity":"39","Temperature":"10"},"BaseTime":""}}
+[2024-08-05_18:07:33.417431][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"88","Flow2":"5","Flow3":"61","Pressure":"20","Humidity":"28","Temperature":"74"},"BaseTime":""}}
+[2024-08-05_18:07:33.418453][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"44","Flow2":"97","Flow3":"3","Pressure":"41","Humidity":"42","Temperature":"9"},"BaseTime":""}}
+[2024-08-05_18:07:34.467126][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"58","Flow2":"33","Flow3":"2","Pressure":"17","Humidity":"87","Temperature":"83"},"BaseTime":""}}
+[2024-08-05_18:07:34.468133][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"16","Flow2":"9","Flow3":"4","Pressure":"72","Humidity":"71","Temperature":"73"},"BaseTime":""}}
+[2024-08-05_18:07:35.515810][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"52","Flow2":"83","Flow3":"71","Pressure":"8","Humidity":"75","Temperature":"50"},"BaseTime":""}}
+[2024-08-05_18:07:35.517103][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"55","Flow2":"74","Flow3":"33","Pressure":"43","Humidity":"42","Temperature":"97"},"BaseTime":""}}
+[2024-08-05_18:07:36.604560][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"74","Flow2":"13","Flow3":"96","Pressure":"62","Humidity":"48","Temperature":"16"},"BaseTime":""}}
+[2024-08-05_18:07:36.604560][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"27","Flow2":"25","Flow3":"42","Pressure":"83","Humidity":"95","Temperature":"80"},"BaseTime":""}}
+[2024-08-05_18:07:37.686096][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"23","Flow2":"49","Flow3":"31","Pressure":"23","Humidity":"14","Temperature":"23"},"BaseTime":""}}
+[2024-08-05_18:07:37.687110][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"20","Flow2":"49","Flow3":"37","Pressure":"40","Humidity":"75","Temperature":"18"},"BaseTime":""}}
+[2024-08-05_18:07:38.782625][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"52","Flow2":"36","Flow3":"26","Pressure":"50","Humidity":"19","Temperature":"32"},"BaseTime":""}}
+[2024-08-05_18:07:38.782625][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"63","Flow2":"49","Flow3":"10","Pressure":"2","Humidity":"65","Temperature":"28"},"BaseTime":""}}
+[2024-08-05_18:07:39.867611][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"84","Flow2":"13","Flow3":"31","Pressure":"39","Humidity":"82","Temperature":"41"},"BaseTime":""}}
+[2024-08-05_18:07:39.867611][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"30","Flow2":"55","Flow3":"77","Pressure":"28","Humidity":"5","Temperature":"33"},"BaseTime":""}}
+[2024-08-05_18:07:40.969560][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"54","Flow2":"3","Flow3":"15","Pressure":"11","Humidity":"17","Temperature":"19"},"BaseTime":""}}
+[2024-08-05_18:07:40.971574][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"32","Flow2":"75","Flow3":"41","Pressure":"26","Humidity":"40","Temperature":"94"},"BaseTime":""}}
+[2024-08-05_18:07:42.088269][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"42","Flow2":"50","Flow3":"52","Pressure":"63","Humidity":"60","Temperature":"44"},"BaseTime":""}}
+[2024-08-05_18:07:42.088818][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"50","Flow2":"20","Flow3":"19","Pressure":"76","Humidity":"24","Temperature":"92"},"BaseTime":""}}
+[2024-08-05_18:07:43.156421][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"2","Flow2":"53","Flow3":"8","Pressure":"65","Humidity":"0","Temperature":"7"},"BaseTime":""}}
+[2024-08-05_18:07:43.156421][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"55","Flow2":"24","Flow3":"5","Pressure":"4","Humidity":"41","Temperature":"83"},"BaseTime":""}}
+[2024-08-05_18:07:44.253408][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"1","Flow2":"40","Flow3":"15","Pressure":"18","Humidity":"90","Temperature":"22"},"BaseTime":""}}
+[2024-08-05_18:07:44.253408][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"52","Flow2":"29","Flow3":"67","Pressure":"84","Humidity":"25","Temperature":"33"},"BaseTime":""}}
+[2024-08-05_18:07:45.354548][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"17","Flow2":"30","Flow3":"97","Pressure":"93","Humidity":"17","Temperature":"70"},"BaseTime":""}}
+[2024-08-05_18:07:45.354548][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"79","Flow2":"79","Flow3":"94","Pressure":"68","Humidity":"29","Temperature":"67"},"BaseTime":""}}
+[2024-08-05_18:07:46.456764][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"57","Flow2":"62","Flow3":"52","Pressure":"91","Humidity":"2","Temperature":"31"},"BaseTime":""}}
+[2024-08-05_18:07:46.456764][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"1","Flow2":"64","Flow3":"52","Pressure":"35","Humidity":"96","Temperature":"32"},"BaseTime":""}}
+[2024-08-05_18:07:47.554022][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"67","Flow2":"30","Flow3":"95","Pressure":"12","Humidity":"2","Temperature":"98"},"BaseTime":""}}
+[2024-08-05_18:07:47.554022][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"10","Flow2":"43","Flow3":"16","Pressure":"22","Humidity":"48","Temperature":"16"},"BaseTime":""}}
+[2024-08-05_18:07:48.639005][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"87","Flow2":"25","Flow3":"12","Pressure":"41","Humidity":"83","Temperature":"46"},"BaseTime":""}}
+[2024-08-05_18:07:48.639005][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"36","Flow2":"29","Flow3":"55","Pressure":"13","Humidity":"14","Temperature":"19"},"BaseTime":""}}
+[2024-08-05_18:07:49.739612][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"25","Flow2":"86","Flow3":"38","Pressure":"79","Humidity":"23","Temperature":"80"},"BaseTime":""}}
+[2024-08-05_18:07:49.739612][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"91","Flow2":"68","Flow3":"65","Pressure":"41","Humidity":"69","Temperature":"66"},"BaseTime":""}}
+[2024-08-05_18:07:50.801494][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"9","Flow2":"24","Flow3":"22","Pressure":"34","Humidity":"25","Temperature":"67"},"BaseTime":""}}
+[2024-08-05_18:07:50.801494][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"48","Flow2":"1","Flow3":"24","Pressure":"62","Humidity":"51","Temperature":"5"},"BaseTime":""}}
+[2024-08-05_18:07:51.883941][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"60","Flow2":"36","Flow3":"19","Pressure":"6","Humidity":"90","Temperature":"36"},"BaseTime":""}}
+[2024-08-05_18:07:51.883941][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"11","Flow2":"47","Flow3":"10","Pressure":"74","Humidity":"51","Temperature":"39"},"BaseTime":""}}
+[2024-08-05_18:07:52.950100][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"20","Flow2":"51","Flow3":"72","Pressure":"55","Humidity":"64","Temperature":"71"},"BaseTime":""}}
+[2024-08-05_18:07:52.950100][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"74","Flow2":"48","Flow3":"86","Pressure":"94","Humidity":"78","Temperature":"46"},"BaseTime":""}}
+[2024-08-05_18:07:54.053876][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"93","Flow2":"69","Flow3":"41","Pressure":"15","Humidity":"48","Temperature":"69"},"BaseTime":""}}
+[2024-08-05_18:07:54.053876][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"55","Flow2":"24","Flow3":"49","Pressure":"40","Humidity":"32","Temperature":"79"},"BaseTime":""}}
+[2024-08-05_18:07:55.138374][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"82","Flow2":"63","Flow3":"17","Pressure":"16","Humidity":"94","Temperature":"44"},"BaseTime":""}}
+[2024-08-05_18:07:55.138374][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"30","Flow2":"57","Flow3":"9","Pressure":"69","Humidity":"10","Temperature":"32"},"BaseTime":""}}
+[2024-08-05_18:07:56.236540][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"98","Flow2":"12","Flow3":"54","Pressure":"70","Humidity":"96","Temperature":"72"},"BaseTime":""}}
+[2024-08-05_18:07:56.236540][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"51","Flow2":"62","Flow3":"42","Pressure":"32","Humidity":"26","Temperature":"14"},"BaseTime":""}}
+[2024-08-05_18:07:57.337020][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"12","Flow2":"11","Flow3":"53","Pressure":"26","Humidity":"43","Temperature":"7"},"BaseTime":""}}
+[2024-08-05_18:07:57.337020][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"64","Flow2":"47","Flow3":"40","Pressure":"14","Humidity":"2","Temperature":"10"},"BaseTime":""}}
+[2024-08-05_18:07:58.422386][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"0","Flow2":"42","Flow3":"73","Pressure":"44","Humidity":"42","Temperature":"20"},"BaseTime":""}}
+[2024-08-05_18:07:58.422386][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"22","Flow2":"96","Flow3":"93","Pressure":"12","Humidity":"52","Temperature":"99"},"BaseTime":""}}
+[2024-08-05_18:07:59.505659][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"47","Flow2":"46","Flow3":"66","Pressure":"35","Humidity":"11","Temperature":"48"},"BaseTime":""}}
+[2024-08-05_18:07:59.505659][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"49","Flow2":"23","Flow3":"79","Pressure":"74","Humidity":"61","Temperature":"6"},"BaseTime":""}}
+[2024-08-05_18:08:00.594824][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"65","Flow2":"86","Flow3":"59","Pressure":"79","Humidity":"59","Temperature":"78"},"BaseTime":""}}
+[2024-08-05_18:08:00.594824][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"38","Flow2":"24","Flow3":"64","Pressure":"30","Humidity":"24","Temperature":"25"},"BaseTime":""}}
+[2024-08-05_18:08:01.684512][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"25","Flow2":"26","Flow3":"36","Pressure":"30","Humidity":"40","Temperature":"87"},"BaseTime":""}}
+[2024-08-05_18:08:01.684512][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"58","Flow2":"3","Flow3":"92","Pressure":"37","Humidity":"86","Temperature":"36"},"BaseTime":""}}
+[2024-08-05_18:08:02.787695][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"33","Flow2":"77","Flow3":"52","Pressure":"98","Humidity":"45","Temperature":"80"},"BaseTime":""}}
+[2024-08-05_18:08:02.787695][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"7","Flow2":"5","Flow3":"7","Pressure":"36","Humidity":"17","Temperature":"42"},"BaseTime":""}}
+[2024-08-05_18:08:03.851203][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"60","Flow2":"17","Flow3":"43","Pressure":"42","Humidity":"23","Temperature":"98"},"BaseTime":""}}
+[2024-08-05_18:08:03.851203][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"29","Flow2":"0","Flow3":"68","Pressure":"61","Humidity":"12","Temperature":"75"},"BaseTime":""}}
+[2024-08-05_18:08:04.926250][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"20","Flow2":"73","Flow3":"26","Pressure":"39","Humidity":"50","Temperature":"19"},"BaseTime":""}}
+[2024-08-05_18:08:04.926250][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"38","Flow2":"18","Flow3":"34","Pressure":"67","Humidity":"36","Temperature":"6"},"BaseTime":""}}
+[2024-08-05_18:08:06.010727][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"31","Flow2":"3","Flow3":"51","Pressure":"6","Humidity":"94","Temperature":"4"},"BaseTime":""}}
+[2024-08-05_18:08:06.010727][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"37","Flow2":"49","Flow3":"49","Pressure":"64","Humidity":"31","Temperature":"62"},"BaseTime":""}}
+[2024-08-05_18:08:07.083057][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"0","Flow2":"8","Flow3":"31","Pressure":"92","Humidity":"35","Temperature":"59"},"BaseTime":""}}
+[2024-08-05_18:08:07.083547][7332] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"78","Flow2":"15","Flow3":"11","Pressure":"30","Humidity":"1","Temperature":"75"},"BaseTime":""}}
+[2024-08-05_18:08:11.079499][9680] SemiTS::WebAssistantServiceMFC: stopping [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:08:11.079499][18336] BnD::B1Acceptor: closing acceptor
+[2024-08-05_18:08:11.079499][25004] SemiTS::LPRWASWebServer: accept error: peerAddress[], localPort[0], reason[995]
+[2024-08-05_18:08:11.188005][18336] BnD::B1Acceptor: acceptor closed
+[2024-08-05_18:08:11.203630][18336] SemiTS::LPRWASWebSocketServerSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:08:11.203754][18336] BnD::B1HttpServerSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:08:11.203754][25004] BnD::B1WebSocketReadWriteImpl: read failed: reason[1236], message[네트워크 연결이 로컬 시스템에 의해 취소되었습니다]
+[2024-08-05_18:08:11.203754][25004] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[1236]
+[2024-08-05_18:08:12.203888][18336] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[1236]
+[2024-08-05_18:08:12.203996][18336] SemiTS::LPRWASWebSocketServerSession: server session disconnected: sessionHandleID[0], peerAddress[], localPort[0], reason[1236]
+[2024-08-05_18:08:12.203996][18336] BnD::B1HttpServerSessionManager: reserveRemoveSession requested. but manager is not alived
+[2024-08-05_18:08:12.298034][18336] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:08:12.298034][18336] BnD::B1RedisDirectClientSubscribeSession: disconnect called: sessionHandleID[2]
+[2024-08-05_18:08:12.298034][30856] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:08:12.298034][18336] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:08:12.298034][30856] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:08:12.298034][7332] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:08:12.298034][18336] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:08:12.298034][7332] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[2], previous_status:[2], reason[995]
+[2024-08-05_18:08:12.298034][18336] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:08:12.298034][2652] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:08:12.298034][2652] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:08:12.329651][18336] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[2], previous_status:[3], reason[995]
+[2024-08-05_18:08:12.329651][18336] BnD::B1RedisDirectClientSubscribeSession: session disconnected
+[2024-08-05_18:08:12.360928][18336] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:08:12.360928][18336] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:08:12.392186][18336] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] stopped
+[2024-08-05_18:09:05.035109][20684] SemiTS::WebAssistantServiceMFC: connecting Administration Service for find equipment type...
+[2024-08-05_18:09:05.035109][20684] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:09:05.035109][20684] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:09:05.060413][20684] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:09:05.060413][20684] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:09:05.060413][10792] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:09:05.061922][10792] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:09:05.077552][31068] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:09:05.077552][31068] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:09:05.243186][19316] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:09:05.243186][19316] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:09:05.243186][31068] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:09:05.258811][20684] SemiTS::WebAssistantServiceMFC: Sync server time:[2024-08-05 18:09:06.096]
+[2024-08-05_18:09:06.096477][20684] SemiTS::WebAssistantServiceMFC: Sync server time finished
+[2024-08-05_18:09:06.096477][20684] SemiTS::WebAssistantServiceMFC: find product type done! disconnecting Administration Service: site[1001], type[1001]
+[2024-08-05_18:09:06.301439][20684] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:09:06.301439][20684] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:09:06.301439][20684] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:09:06.301439][20684] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-05_18:09:06.301439][10792] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:09:06.301439][31068] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:09:06.301439][10792] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:09:06.301439][31068] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:09:07.302544][20684] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:09:07.302544][20684] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:09:07.318175][20684] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:09:07.318175][20684] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:09:07.333829][20684] SemiTS::WebAssistantServiceMFC: starting [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:09:07.333829][20684] SemiTS::LPRWebAssistantServicePublic: Connecting [20.20.0.152:9379(0)]
+[2024-08-05_18:09:07.333829][20684] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTING: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:09:07.333829][20684] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:09:07.349426][20684] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTING: sessionHandleID[1], previous_status:[-1]
+[2024-08-05_18:09:07.349426][20684] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:09:07.349426][27496] BnD::B1RedisDirectClientWriteSession: session connected -> clear buffer
+[2024-08-05_18:09:07.349426][27496] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[1]
+[2024-08-05_18:09:07.365051][20684] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTING: sessionHandleID[2], previous_status:[-1]
+[2024-08-05_18:09:07.365051][20684] BnD::B1ClientSocket: connecting: address[20.20.0.152], port[9379]
+[2024-08-05_18:09:07.365051][20132] BnD::B1RedisDirectClientReadSession: session connected -> clear buffer
+[2024-08-05_18:09:07.365051][20132] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_CONNECTED: sessionHandleID[1], previous_status:[1]
+[2024-08-05_18:09:07.380676][16044] BnD::B1RedisDirectClientSubscribeSession: session connected -> clear buffer
+[2024-08-05_18:09:07.380676][16044] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_CONNECTED: sessionHandleID[2], previous_status:[1]
+[2024-08-05_18:09:07.549241][21540] BnD::B1RedisDirectClientSubscribeSession: selecting redis db: db[0]
+[2024-08-05_18:09:07.549241][21540] BnD::B1RedisDirectClientReadSession: selecting redis db: db[0]
+[2024-08-05_18:09:07.549241][20132] BnD::B1RedisDirectClientReadSession: redis db selected
+[2024-08-05_18:09:07.549241][21540] BnD::B1RedisDirectClientWriteSession: selecting redis db: db[0]
+[2024-08-05_18:09:07.564893][20684] SemiTS::LPRWASWebServer: begin accept: port[22001]
+[2024-08-05_18:09:07.601686][20684] SemiTS::LPRWebAssistantServicePublic: initializing performance check: tick[265]
+[2024-08-05_18:09:07.601686][20684] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] started
+[2024-08-05_18:09:07.644052][29944] SemiTS::WASWebServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:09:07.644052][29944] BnD::B1HttpServerSessionManager: session modified: sessionHandleID[0]
+[2024-08-05_18:09:07.644052][29944] SemiTS::LPRWASWebSocketServerSession: web socket accepted: peerAddress[127.0.0.1], localPort[22001]
+[2024-08-05_18:09:07.644052][29944] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_CONNECTED: sessionHandleID[0], previous_status:[-1]
+[2024-08-05_18:09:12.166908][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"98","Flow2":"50","Flow3":"44","Pressure":"46","Humidity":"48","Temperature":"24"},"BaseTime":""}}
+[2024-08-05_18:09:12.166908][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"11","Flow2":"92","Flow3":"89","Pressure":"71","Humidity":"36","Temperature":"28"},"BaseTime":""}}
+[2024-08-05_18:09:13.255301][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"20","Flow2":"72","Flow3":"31","Pressure":"42","Humidity":"23","Temperature":"51"},"BaseTime":""}}
+[2024-08-05_18:09:13.255301][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"32","Flow2":"90","Flow3":"79","Pressure":"16","Humidity":"97","Temperature":"27"},"BaseTime":""}}
+[2024-08-05_18:09:14.352937][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"8","Flow2":"87","Flow3":"41","Pressure":"65","Humidity":"1","Temperature":"10"},"BaseTime":""}}
+[2024-08-05_18:09:14.352937][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"26","Flow2":"9","Flow3":"22","Pressure":"42","Humidity":"8","Temperature":"8"},"BaseTime":""}}
+[2024-08-05_18:09:15.440927][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"87","Flow2":"27","Flow3":"64","Pressure":"27","Humidity":"18","Temperature":"12"},"BaseTime":""}}
+[2024-08-05_18:09:15.440927][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"35","Flow2":"19","Flow3":"31","Pressure":"82","Humidity":"23","Temperature":"13"},"BaseTime":""}}
+[2024-08-05_18:09:16.533112][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"79","Flow2":"48","Flow3":"22","Pressure":"47","Humidity":"67","Temperature":"32"},"BaseTime":""}}
+[2024-08-05_18:09:16.533112][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"44","Flow2":"83","Flow3":"7","Pressure":"47","Humidity":"16","Temperature":"11"},"BaseTime":""}}
+[2024-08-05_18:09:17.632964][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"67","Flow2":"62","Flow3":"25","Pressure":"61","Humidity":"76","Temperature":"3"},"BaseTime":""}}
+[2024-08-05_18:09:17.636313][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"51","Flow2":"69","Flow3":"38","Pressure":"90","Humidity":"91","Temperature":"46"},"BaseTime":""}}
+[2024-08-05_18:09:18.730352][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"4","Flow2":"57","Flow3":"43","Pressure":"94","Humidity":"85","Temperature":"74"},"BaseTime":""}}
+[2024-08-05_18:09:18.730352][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"79","Flow2":"97","Flow3":"70","Pressure":"3","Humidity":"15","Temperature":"50"},"BaseTime":""}}
+[2024-08-05_18:09:19.823509][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"36","Flow2":"59","Flow3":"10","Pressure":"34","Humidity":"83","Temperature":"71"},"BaseTime":""}}
+[2024-08-05_18:09:19.823509][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"18","Flow2":"17","Flow3":"71","Pressure":"19","Humidity":"61","Temperature":"55"},"BaseTime":""}}
+[2024-08-05_18:09:20.936867][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"26","Flow2":"54","Flow3":"87","Pressure":"69","Humidity":"94","Temperature":"15"},"BaseTime":""}}
+[2024-08-05_18:09:20.936867][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"37","Flow2":"16","Flow3":"56","Pressure":"26","Humidity":"74","Temperature":"49"},"BaseTime":""}}
+[2024-08-05_18:09:22.020026][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"17","Flow2":"50","Flow3":"0","Pressure":"50","Humidity":"60","Temperature":"81"},"BaseTime":""}}
+[2024-08-05_18:09:22.020026][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"93","Flow2":"28","Flow3":"21","Pressure":"1","Humidity":"50","Temperature":"37"},"BaseTime":""}}
+[2024-08-05_18:09:23.110519][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"0","Flow2":"35","Flow3":"52","Pressure":"68","Humidity":"37","Temperature":"85"},"BaseTime":""}}
+[2024-08-05_18:09:23.110519][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"89","Flow2":"2","Flow3":"67","Pressure":"72","Humidity":"33","Temperature":"47"},"BaseTime":""}}
+[2024-08-05_18:09:24.186040][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"34","Flow2":"8","Flow3":"2","Pressure":"50","Humidity":"25","Temperature":"7"},"BaseTime":""}}
+[2024-08-05_18:09:24.186040][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"0","Flow2":"69","Flow3":"7","Pressure":"60","Humidity":"30","Temperature":"41"},"BaseTime":""}}
+[2024-08-05_18:09:25.279405][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"2","Flow2":"68","Flow3":"61","Pressure":"32","Humidity":"2","Temperature":"6"},"BaseTime":""}}
+[2024-08-05_18:09:25.279405][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"54","Flow2":"16","Flow3":"23","Pressure":"16","Humidity":"45","Temperature":"3"},"BaseTime":""}}
+[2024-08-05_18:09:26.334454][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110010","Flow1":"57","Flow2":"64","Flow3":"43","Pressure":"15","Humidity":"19","Temperature":"31"},"BaseTime":""}}
+[2024-08-05_18:09:26.334454][16044] SemiTS::LPRWebAssistantServicePublic: {"MessageID":"LPRZonePurgeAttributesMsg","MessageData":{"ArchiveObject":{"ZoneID":"11110020","Flow1":"5","Flow2":"88","Flow3":"82","Pressure":"15","Humidity":"74","Temperature":"15"},"BaseTime":""}}
+[2024-08-05_18:19:01.173263][8664] SemiTS::WebAssistantServiceMFC: stopping [WebAssistantService_LPR][1001014] version:[1000][20240423]
+[2024-08-05_18:19:01.173263][20684] BnD::B1Acceptor: closing acceptor
+[2024-08-05_18:19:01.173263][29944] SemiTS::LPRWASWebServer: accept error: peerAddress[], localPort[0], reason[995]
+[2024-08-05_18:19:01.282716][20684] BnD::B1Acceptor: acceptor closed
+[2024-08-05_18:19:01.439492][20684] SemiTS::LPRWASWebSocketServerSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:19:01.439492][20684] BnD::B1HttpServerSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:19:01.440484][29944] BnD::B1WebSocketReadWriteImpl: read failed: reason[1236], message[네트워크 연결이 로컬 시스템에 의해 취소되었습니다]
+[2024-08-05_18:19:01.440484][29944] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[1236]
+[2024-08-05_18:19:02.442517][20684] SemiTS::LPRWASWebSocketServerSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[1236]
+[2024-08-05_18:19:02.443075][20684] SemiTS::LPRWASWebSocketServerSession: server session disconnected: sessionHandleID[0], peerAddress[], localPort[0], reason[1236]
+[2024-08-05_18:19:02.443075][20684] BnD::B1HttpServerSessionManager: reserveRemoveSession requested. but manager is not alived
+[2024-08-05_18:19:02.710601][20684] BnD::B1RedisDirectClientSubscribeSession: disconnect called: sessionHandleID[2]
+[2024-08-05_18:19:02.710601][20684] BnD::B1RedisDirectClientReadSession: disconnect called: sessionHandleID[1]
+[2024-08-05_18:19:02.710601][20684] BnD::B1RedisDirectClientWriteSession: disconnect called: sessionHandleID[0]
+[2024-08-05_18:19:02.710601][20684] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[2]
+[2024-08-05_18:19:02.710601][16044] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:19:02.710601][20684] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[1]
+[2024-08-05_18:19:02.710601][16044] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[2], previous_status:[2], reason[995]
+[2024-08-05_18:19:02.710601][20684] BnD::B1BaseSessionManager: waiting disconnection: sessionHandleID[0]
+[2024-08-05_18:19:02.710601][20132] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:19:02.710601][27496] BnD::B1ArrayBufferReadWriteImpl: read failed: reason[995], message[스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다]
+[2024-08-05_18:19:02.710601][20132] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[1], previous_status:[2], reason[995]
+[2024-08-05_18:19:02.710601][27496] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTING: sessionHandleID[0], previous_status:[2], reason[995]
+[2024-08-05_18:19:03.713368][20684] BnD::B1RedisDirectClientSubscribeSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[2], previous_status:[3], reason[995]
+[2024-08-05_18:19:03.713368][20684] BnD::B1RedisDirectClientSubscribeSession: session disconnected
+[2024-08-05_18:19:03.736096][20684] BnD::B1RedisDirectClientReadSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[1], previous_status:[3], reason[995]
+[2024-08-05_18:19:03.736096][20684] BnD::B1RedisDirectClientReadSession: session disconnected
+[2024-08-05_18:19:03.769029][20684] BnD::B1RedisDirectClientWriteSession: set connection_status to STATUS_DISCONNECTED: sessionHandleID[0], previous_status:[3], reason[995]
+[2024-08-05_18:19:03.769029][20684] BnD::B1RedisDirectClientWriteSession: session disconnected
+[2024-08-05_18:19:03.785098][20684] SemiTS::WebAssistantServiceMFC: [WebAssistantService_LPR][1001014] version:[1000][20240423] stopped

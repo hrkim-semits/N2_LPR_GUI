@@ -1,0 +1,7 @@
+{
+    "LogPath": "",
+    "LogDays": "0",
+    "AdminAddress": "127.0.0.1",
+    "AdminPort": "9379",
+    "AdminDB": "0"
+}
