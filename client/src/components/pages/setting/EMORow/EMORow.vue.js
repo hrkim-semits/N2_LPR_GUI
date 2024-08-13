@@ -49,7 +49,7 @@ function __VLS_template() {
     (__VLS_ctx.message);
     // @ts-ignore
     [message,];
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("setArea") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("setEMOArea") }, });
     __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("setStatus") }, });
     __VLS_elementAsFunction(__VLS_intrinsicElements.select, __VLS_intrinsicElements.select)({ ...{ class: ("TargetStatus") }, disabled: ((__VLS_ctx.isStop)), });
     __VLS_elementAsFunction(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({});
@@ -96,7 +96,7 @@ function __VLS_template() {
     if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
         __VLS_styleScopedClasses['settingRow'];
         __VLS_styleScopedClasses['msgArea'];
-        __VLS_styleScopedClasses['setArea'];
+        __VLS_styleScopedClasses['setEMOArea'];
         __VLS_styleScopedClasses['setStatus'];
         __VLS_styleScopedClasses['TargetStatus'];
         __VLS_styleScopedClasses['setStatus'];

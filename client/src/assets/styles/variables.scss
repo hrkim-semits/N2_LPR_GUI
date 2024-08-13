@@ -9,7 +9,7 @@ $main-width: calc(100% - $sideBar-width);
 $main-height: calc(100% - $header-height - $footer-height);
 $sideBar-height: calc(100% - $header-height - $footer-height);
 
-// font-size (px -> rem)
+// px -> rem
 $pxToRem10: 0.98rem;
 $pxToRem12: 1.17rem;
 $pxToRem14: 1.37rem;

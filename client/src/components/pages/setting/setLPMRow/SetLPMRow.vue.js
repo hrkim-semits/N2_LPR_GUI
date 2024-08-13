@@ -23,20 +23,36 @@ export default defineComponent({
     },
     methods: {
         checkValue(event) {
-            // console.log(this.lpmValue);
+            console.log('[onInput] lpmFront: ', this.lpmFront);
+            console.log('[onInput] lpmRear: ', this.lpmRear);
             const inputDOM = event.target;
             console.log('selectionStart:', inputDOM.selectionStart);
             // 숫자와 소수점만 입력 가능
             // eslint-disable-next-line no-useless-escape
-            this.lpmValue = this.lpmValue.replace(/[^\.0-9]/g, '');
-            console.log('정규식? ', /^[\d]*\.?[\d]{0,1}$/.test(this.lpmValue));
+            this.lpmFront = this.lpmFront.replace(/[^\.0-9]/g, '');
+            // eslint-disable-next-line no-useless-escape
+            this.lpmRear = this.lpmRear.replace(/[^\.0-9]/g, '');
+            // console.log('정규식? ', /^[\d]*\.?[\d]{0,1}$/.test(this.lpmValue));
             // 소수점 뒤 한자리까지만 허용
-            if (!(/^\d*\.?\d{0,1}$/.test(this.lpmValue))) {
+            if (!(/^\d*\.?\d{0,1}$/.test(this.lpmFront))) {
                 let cursorPosition = inputDOM.selectionStart;
                 if (cursorPosition) {
-                    const newValue = this.lpmValue.slice(0, cursorPosition - 1) + this.lpmValue.slice(cursorPosition);
-                    this.lpmValue = newValue;
-                    console.log('lpmValue!!!! : ', this.lpmValue);
+                    const newValue = this.lpmFront.slice(0, cursorPosition - 1) + this.lpmFront.slice(cursorPosition);
+                    this.lpmFront = newValue;
+                    console.log('lpmFront!!!! : ', this.lpmFront);
+                }
+                this.$message.error({
+                    content: '소수점 뒤 한 자리까지만 입력 가능합니다.',
+                    closable: true,
+                    duration: 2000
+                });
+            }
+            if (!(/^\d*\.?\d{0,1}$/.test(this.lpmRear))) {
+                let cursorPosition = inputDOM.selectionStart;
+                if (cursorPosition) {
+                    const newValue = this.lpmRear.slice(0, cursorPosition - 1) + this.lpmRear.slice(cursorPosition);
+                    this.lpmRear = newValue;
+                    console.log('lpmRear!!!! : ', this.lpmRear);
                 }
                 this.$message.error({
                     content: '소수점 뒤 한 자리까지만 입력 가능합니다.',
@@ -45,29 +61,41 @@ export default defineComponent({
                 });
             }
             // 범위 확인
-            if (this.lpmValue < this.LPMRangeMin || this.lpmValue > this.LPMRangeMax) {
+            if (this.lpmFront < this.LPMRangeMin || this.lpmFront > this.LPMRangeMax || this.lpmRear < this.LPMRangeMin || this.lpmRear > this.LPMRangeMax) {
                 this.$message.error({
                     content: `${String(this.LPMRangeMin)}~${String(this.LPMRangeMax)}까지만 입력 가능합니다.`,
                     closable: true,
                     duration: 2000
                 });
-                if (this.lpmValue < this.LPMRangeMin) {
-                    this.lpmValue = String(this.LPMRangeMin);
+                if (this.lpmFront < this.LPMRangeMin) {
+                    this.lpmFront = String(this.LPMRangeMin);
                 }
                 else {
-                    this.lpmValue = String(this.LPMRangeMax);
+                    this.lpmFront = String(this.LPMRangeMax);
+                }
+                if (this.lpmRear < this.LPMRangeMin) {
+                    this.lpmRear = String(this.LPMRangeMin);
+                }
+                else {
+                    this.lpmRear = String(this.LPMRangeMax);
                 }
             }
-            console.log('result', this.lpmValue);
+            console.log('result(Front)', this.lpmFront);
+            console.log('result(Rear)', this.lpmRear);
         },
         sendFlowMessage() {
             const globalStore = useGlobalStore();
-            console.log('lpmValue: ', this.lpmValue);
+            console.log('lpmFront: ', this.lpmFront);
+            console.log('lpmRear: ', this.lpmRear);
             const singalGUIMsgPurgeReq = {
                 MessageID: 'SingalGUIMsgPurgeReq',
                 MessageData: {
                     TargetCommand: this.message,
-                    TargetFlow: String(this.lpmValue),
+                    // TargetFlow: String(this.lpmValue),
+                    TargetFlow: {
+                        Front: String(this.lpmFront),
+                        Rear: String(this.lpmRear)
+                    },
                     BaseTime: globalStore.getDateTime()
                 }
             };
@@ -82,51 +110,23 @@ export default defineComponent({
         let LPMRangeDefault = null;
         let markerStep = null;
         let markerValues = [];
-        let lpmValue = ref('0');
+        let lpmFront = ref('0');
+        let lpmRear = ref('0');
         const postPurgeMs = ref('0');
         if (props.LPMRange) {
             LPMRangeMin = props.LPMRange.min;
             LPMRangeMax = props.LPMRange.max;
-            lpmValue.value = props.LPMRange.default;
+            lpmFront.value = props.LPMRange.default;
+            lpmRear.value = props.LPMRange.default;
             markerStep = props.LPMRange.markerStep;
             for (let i = LPMRangeMin; i <= LPMRangeMax; i += markerStep) {
                 markerValues.push(i);
             }
         }
-        // const inputInt = (event: Event) => {
-        //   const target = event.target as HTMLInputElement;
-        //   const value = target.value;
-        //   if (!/^\d*$/.test(value)) {
-        //     postPurgeMs.value = value.replace(/[^\d]/g, '');
-        //   } else {
-        //     postPurgeMs.value = value;
-        //   }
-        // };
-        // const checkValue = (event: Event) => {
-        //   const input = event.target as HTMLInputElement;
-        //   let value = parseInt(input.value, 10); // 기본 10진수로 설정
-        //   const regexp = /^\d*.?\d{0,1}$/; // 소수점 이하 한 자리까지 허용하는 정규표현식
-        //   const deleteLast = () => {
-        //     input.value = input.value.slice(0, -1);
-        //     // value = parseInt( input.value );
-        //     value = Number(input.value);
-        //   };
-        //   if (value < LPMRageMin || value > LPMRageMax) {
-        //     alert( '0~100까지만 입력 가능합니다.' );
-        //     // 범위를 벗어날 경우 입력되지 않도록 함
-        //     deleteLast();
-        //   } 
-        //   if ( !regexp.test(input.value) ) {
-        //     alert( '소수점 한 자리까지만 입력 가능합니다.' );
-        //     // 범위를 벗어날 경우 입력되지 않도록 함
-        //     deleteLast();
-        //   }
-        // };
         return {
-            lpmValue,
+            lpmFront,
+            lpmRear,
             postPurgeMs,
-            // checkValue,
-            // inputInt,
             LPMRangeMin,
             LPMRangeMax,
             LPMRangeDefault,
@@ -154,9 +154,9 @@ function __VLS_template() {
     __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("rangeArea") }, });
     __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("rangeSliderWrapper") }, });
     __VLS_elementAsFunction(__VLS_intrinsicElements.input, __VLS_intrinsicElements.input)({ type: ("range"), min: ((__VLS_ctx.LPMRangeMin)), max: ((__VLS_ctx.LPMRangeMax)), list: ("markers"), disabled: ((__VLS_ctx.isStop)), });
-    (__VLS_ctx.lpmValue);
+    (__VLS_ctx.lpmFront);
     // @ts-ignore
-    [LPMRangeMin, LPMRangeMax, isStop, lpmValue,];
+    [LPMRangeMin, LPMRangeMax, isStop, lpmFront,];
     __VLS_elementAsFunction(__VLS_intrinsicElements.datalist, __VLS_intrinsicElements.datalist)({ id: ("markers"), });
     for (const [value] of __VLS_getVForSourceType((__VLS_ctx.markerValues))) {
         __VLS_elementAsFunction(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({ key: ((value)), value: ((value)), });
@@ -173,9 +173,37 @@ function __VLS_template() {
     // @ts-ignore
     [LPMRangeMax,];
     __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("numberArea") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.input, __VLS_intrinsicElements.input)({ ...{ onInput: (__VLS_ctx.checkValue) }, ...{ class: ("TargetFlow") }, type: ("text"), min: ((__VLS_ctx.LPMRangeMin)), max: ((__VLS_ctx.LPMRangeMax)), value: ((__VLS_ctx.lpmValue)), disabled: ((__VLS_ctx.isStop)), });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.input, __VLS_intrinsicElements.input)({ ...{ onInput: (__VLS_ctx.checkValue) }, ...{ class: ("TargetFlow Front") }, type: ("text"), min: ((__VLS_ctx.LPMRangeMin)), max: ((__VLS_ctx.LPMRangeMax)), value: ((__VLS_ctx.lpmFront)), disabled: ((__VLS_ctx.isStop)), });
     // @ts-ignore
-    [LPMRangeMin, LPMRangeMax, isStop, lpmValue, checkValue,];
+    [LPMRangeMin, LPMRangeMax, isStop, lpmFront, checkValue,];
+    __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({ ...{ class: ("settingUnit") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({ ...{ class: ("sepearateText") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("setArea") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("rangeArea") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("rangeSliderWrapper") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.input, __VLS_intrinsicElements.input)({ type: ("range"), min: ((__VLS_ctx.LPMRangeMin)), max: ((__VLS_ctx.LPMRangeMax)), list: ("markers"), disabled: ((__VLS_ctx.isStop)), });
+    (__VLS_ctx.lpmRear);
+    // @ts-ignore
+    [LPMRangeMin, LPMRangeMax, isStop, lpmRear,];
+    __VLS_elementAsFunction(__VLS_intrinsicElements.datalist, __VLS_intrinsicElements.datalist)({ id: ("markers"), });
+    for (const [value] of __VLS_getVForSourceType((__VLS_ctx.markerValues))) {
+        __VLS_elementAsFunction(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({ key: ((value)), value: ((value)), });
+        // @ts-ignore
+        [markerValues,];
+    }
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("displayRange") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({ id: ("minLPM"), });
+    (String(__VLS_ctx.LPMRangeMin));
+    // @ts-ignore
+    [LPMRangeMin,];
+    __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({ id: ("maxLPM"), });
+    (String(__VLS_ctx.LPMRangeMax));
+    // @ts-ignore
+    [LPMRangeMax,];
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("numberArea") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.input, __VLS_intrinsicElements.input)({ ...{ onInput: (__VLS_ctx.checkValue) }, ...{ class: ("TargetFlow Rear") }, type: ("text"), min: ((__VLS_ctx.LPMRangeMin)), max: ((__VLS_ctx.LPMRangeMax)), value: ((__VLS_ctx.lpmRear)), disabled: ((__VLS_ctx.isStop)), });
+    // @ts-ignore
+    [LPMRangeMin, LPMRangeMax, isStop, checkValue, lpmRear,];
     __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({ ...{ class: ("settingUnit") }, });
     // @ts-ignore
     const __VLS_0 = {}
@@ -211,6 +239,16 @@ function __VLS_template() {
         __VLS_styleScopedClasses['displayRange'];
         __VLS_styleScopedClasses['numberArea'];
         __VLS_styleScopedClasses['TargetFlow'];
+        __VLS_styleScopedClasses['Front'];
+        __VLS_styleScopedClasses['settingUnit'];
+        __VLS_styleScopedClasses['sepearateText'];
+        __VLS_styleScopedClasses['setArea'];
+        __VLS_styleScopedClasses['rangeArea'];
+        __VLS_styleScopedClasses['rangeSliderWrapper'];
+        __VLS_styleScopedClasses['displayRange'];
+        __VLS_styleScopedClasses['numberArea'];
+        __VLS_styleScopedClasses['TargetFlow'];
+        __VLS_styleScopedClasses['Rear'];
         __VLS_styleScopedClasses['settingUnit'];
         __VLS_styleScopedClasses['eachApplyButton'];
     }

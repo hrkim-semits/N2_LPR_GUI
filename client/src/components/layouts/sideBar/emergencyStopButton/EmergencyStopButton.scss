@@ -1,0 +1,35 @@
+.emergencyBtn {
+  width: 82%;
+  height: 9.76rem;
+  position: absolute;
+  bottom: 2.92rem;
+  border: none;
+  padding: 0.39rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: normal;
+  color: #fff;
+  color: var(--emergency-btn-text-color);
+  background: var(--emergency-btn-background);
+  width: 11.71rem; 
+  height: 11.71rem; 
+  border-radius: 50%; 
+  padding-top: 0.97rem;
+  box-shadow: var(--emergency-btn-shadow);
+  transition: 0.3s all ease;
+  letter-spacing: -.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: {
+    family: 'Play';
+    weight: 700;
+    size: $pxToRem18;
+  }
+
+  &.active {
+    transform: translateY(0.29rem);
+    box-shadow: 0 0.39rem 0 rgb(0, 165, 88), 0 0.68rem 0.97rem rgba(0,0,0,.35);
+    background: -webkit-radial-gradient(center 50px, circle farthest-corner, $green-4, $green-6 100%);
+  }
+}

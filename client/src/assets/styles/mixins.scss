@@ -1,6 +1,25 @@
-// 공통 스타일 믹스인을 정의합니다.
 @charset "utf-8";
 
 @mixin modeTransition() {
   transition: all 0.25s;
+}
+
+@mixin button-style-primary() {
+  background-color: $semi-ts-dark-blue;
+  color: #fff;
+
+  svg {
+    color: #fff;
+  }
+}
+
+@mixin button-style-secondary() {
+  background-color: var(--bg-light);
+  color: $semi-ts-dark-blue;
+  border: 1px solid $semi-ts-dark-blue;
+  box-sizing: border-box;
+
+  svg {
+    color: $semi-ts-dark-blue;
+  }
 }

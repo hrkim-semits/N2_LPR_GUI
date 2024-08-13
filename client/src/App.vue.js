@@ -7,6 +7,7 @@ import TheFooter from '@/layouts/TheFooter.vue';
 const { defineProps, defineSlots, defineEmits, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
 const globalStore = useGlobalStore();
 const isStop = computed(() => globalStore.isStop);
+const isConnected = computed(() => globalStore.isConnected);
 const updateEmergencyUI = () => {
     if (isStop.value) {
         document.body.classList.add('emergency');
@@ -15,10 +16,6 @@ const updateEmergencyUI = () => {
         document.body.classList.remove('emergency');
     }
 };
-function emergencyStop() {
-    // console.log('emergency stop');
-    globalStore.toggleStop();
-}
 onMounted(() => {
     // 마운트 됐을 시점에 stop일 수도...? -> 웹 소켓으로 초기 상태값 받아오기?
     // 웹 소켓으로 초기(기존) 상태값 받아서 출력 (monitor, setting, log, stop)?
@@ -57,34 +54,28 @@ function __VLS_template() {
     // @ts-ignore
     [TheSideBar, TheSideBar,];
     // @ts-ignore
-    const __VLS_5 = __VLS_asFunctionalComponent(TheSideBar, new TheSideBar({ ...{ 'onEmergencyStop': {} }, isStop: ((__VLS_ctx.isStop)), }));
-    const __VLS_6 = __VLS_5({ ...{ 'onEmergencyStop': {} }, isStop: ((__VLS_ctx.isStop)), }, ...__VLS_functionalComponentArgsRest(__VLS_5));
-    ({}({ ...{ 'onEmergencyStop': {} }, isStop: ((__VLS_ctx.isStop)), }));
-    let __VLS_10;
-    const __VLS_11 = {
-        onEmergencyStop: (__VLS_ctx.emergencyStop)
-    };
-    // @ts-ignore
-    [isStop, emergencyStop,];
-    const __VLS_9 = __VLS_pickFunctionalComponentCtx(TheSideBar, __VLS_6);
-    let __VLS_7;
-    let __VLS_8;
-    // @ts-ignore
-    [TheView, TheView,];
-    // @ts-ignore
-    const __VLS_12 = __VLS_asFunctionalComponent(TheView, new TheView({ isStop: ((__VLS_ctx.isStop)), }));
-    const __VLS_13 = __VLS_12({ isStop: ((__VLS_ctx.isStop)), }, ...__VLS_functionalComponentArgsRest(__VLS_12));
+    const __VLS_5 = __VLS_asFunctionalComponent(TheSideBar, new TheSideBar({ isStop: ((__VLS_ctx.isStop)), }));
+    const __VLS_6 = __VLS_5({ isStop: ((__VLS_ctx.isStop)), }, ...__VLS_functionalComponentArgsRest(__VLS_5));
     ({}({ isStop: ((__VLS_ctx.isStop)), }));
     // @ts-ignore
     [isStop,];
-    const __VLS_16 = __VLS_pickFunctionalComponentCtx(TheView, __VLS_13);
+    const __VLS_9 = __VLS_pickFunctionalComponentCtx(TheSideBar, __VLS_6);
+    // @ts-ignore
+    [TheView, TheView,];
+    // @ts-ignore
+    const __VLS_10 = __VLS_asFunctionalComponent(TheView, new TheView({ isStop: ((__VLS_ctx.isStop)), }));
+    const __VLS_11 = __VLS_10({ isStop: ((__VLS_ctx.isStop)), }, ...__VLS_functionalComponentArgsRest(__VLS_10));
+    ({}({ isStop: ((__VLS_ctx.isStop)), }));
+    // @ts-ignore
+    [isStop,];
+    const __VLS_14 = __VLS_pickFunctionalComponentCtx(TheView, __VLS_11);
     // @ts-ignore
     [TheFooter, TheFooter,];
     // @ts-ignore
-    const __VLS_17 = __VLS_asFunctionalComponent(TheFooter, new TheFooter({}));
-    const __VLS_18 = __VLS_17({}, ...__VLS_functionalComponentArgsRest(__VLS_17));
+    const __VLS_15 = __VLS_asFunctionalComponent(TheFooter, new TheFooter({}));
+    const __VLS_16 = __VLS_15({}, ...__VLS_functionalComponentArgsRest(__VLS_15));
     ({}({}));
-    const __VLS_21 = __VLS_pickFunctionalComponentCtx(TheFooter, __VLS_18);
+    const __VLS_19 = __VLS_pickFunctionalComponentCtx(TheFooter, __VLS_16);
     if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
     }
     var __VLS_slots;
@@ -100,7 +91,6 @@ function __VLS_template() {
                 TheView: TheView,
                 TheFooter: TheFooter,
                 isStop: isStop,
-                emergencyStop: emergencyStop,
             };
         },
     });

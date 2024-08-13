@@ -138,9 +138,9 @@ function __VLS_template() {
     (__VLS_ctx.message);
     // @ts-ignore
     [message,];
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("setArea half") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("rangeArea half") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("rangeSliderWrapper") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("setPurgeArea") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("purgeRangeArea") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("purgeRangeSliderWrapper") }, });
     __VLS_elementAsFunction(__VLS_intrinsicElements.input, __VLS_intrinsicElements.input)({ type: ("range"), min: ((__VLS_ctx.LPMRangeMin)), max: ((__VLS_ctx.LPMRangeMax)), list: ("markers"), disabled: ((__VLS_ctx.isStop)), });
     (__VLS_ctx.lpmValue);
     // @ts-ignore
@@ -160,11 +160,13 @@ function __VLS_template() {
     (String(__VLS_ctx.LPMRangeMax));
     // @ts-ignore
     [LPMRangeMax,];
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("numberArea") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("purgeNumberArea") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("flowInputNum") }, });
     __VLS_elementAsFunction(__VLS_intrinsicElements.input, __VLS_intrinsicElements.input)({ ...{ onInput: (__VLS_ctx.checkValue) }, ...{ class: ("TargetFlow") }, type: ("text"), min: ((__VLS_ctx.LPMRangeMin)), max: ((__VLS_ctx.LPMRangeMax)), value: ((__VLS_ctx.lpmValue)), disabled: ((__VLS_ctx.isStop)), });
     // @ts-ignore
     [LPMRangeMin, LPMRangeMax, isStop, lpmValue, checkValue,];
     __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({ ...{ class: ("settingUnit") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("durationInputNum") }, });
     __VLS_elementAsFunction(__VLS_intrinsicElements.input, __VLS_intrinsicElements.input)({ ...{ onInput: (__VLS_ctx.inputInt) }, ref: ("inputRef"), ...{ class: ("PurgeDurationOfMillis") }, type: ("text"), min: ("0"), value: ((__VLS_ctx.postPurgeMs)), disabled: ((__VLS_ctx.isStop)), });
     // @ts-ignore
     (__VLS_ctx.inputRef);
@@ -199,15 +201,15 @@ function __VLS_template() {
     if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
         __VLS_styleScopedClasses['settingRow'];
         __VLS_styleScopedClasses['msgArea'];
-        __VLS_styleScopedClasses['setArea'];
-        __VLS_styleScopedClasses['half'];
-        __VLS_styleScopedClasses['rangeArea'];
-        __VLS_styleScopedClasses['half'];
-        __VLS_styleScopedClasses['rangeSliderWrapper'];
+        __VLS_styleScopedClasses['setPurgeArea'];
+        __VLS_styleScopedClasses['purgeRangeArea'];
+        __VLS_styleScopedClasses['purgeRangeSliderWrapper'];
         __VLS_styleScopedClasses['displayRange'];
-        __VLS_styleScopedClasses['numberArea'];
+        __VLS_styleScopedClasses['purgeNumberArea'];
+        __VLS_styleScopedClasses['flowInputNum'];
         __VLS_styleScopedClasses['TargetFlow'];
         __VLS_styleScopedClasses['settingUnit'];
+        __VLS_styleScopedClasses['durationInputNum'];
         __VLS_styleScopedClasses['PurgeDurationOfMillis'];
         __VLS_styleScopedClasses['settingUnit'];
         __VLS_styleScopedClasses['eachApplyButton'];

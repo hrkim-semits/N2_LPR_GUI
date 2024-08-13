@@ -1,7 +1,7 @@
 import { computed } from 'vue';
 import { useGlobalStore } from '@/stores/globalStore';
 import './HeaderComponent.scss';
-import ModeToggle from '@/components/common/modeToggle/ModeToggle.vue';
+import ModeToggle from './modeToggle/ModeToggle.vue';
 const { defineProps, defineSlots, defineEmits, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
 const globalStore = useGlobalStore();
 const isStop = computed(() => globalStore.isStop);
