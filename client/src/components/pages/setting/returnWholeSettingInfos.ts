@@ -1,8 +1,13 @@
 import { useGlobalStore } from '@/stores/globalStore';
 
+interface TargetFlow {
+  // 'Front': string,
+  // 'Rear': string,
+  [key: string]: string
+}
 interface DataObj {
   TargetCommand: string;
-  [key: string]: string | string[]; // 동적으로 키와 값을 추가할 수 있도록 설정
+  [key: string]: string | string[] | TargetFlow; // 동적으로 키와 값을 추가할 수 있도록 설정
 }
 
 interface SettingAllObj {
@@ -31,6 +36,10 @@ const returnWholeSettingInfos = ():object => {
     const TargetCommand = msgArea ? msgArea.innerText : '';
 
     const dataObj: DataObj = { TargetCommand: TargetCommand };
+    let tempFlowObj: TargetFlow = {
+      'Front': '',
+      'Rear': ''
+    };
 
     settingRow.querySelectorAll('input[type="text"]').forEach(inputDOM => {
       // console.log(inputDOM);
@@ -38,7 +47,30 @@ const returnWholeSettingInfos = ():object => {
       const className = element.className;
       const value = element.value;
 
-      dataObj[className] = value;
+      // console.log('className: ', className);
+      if (className === 'TargetFlow Front' || className === 'TargetFlow Rear') {
+        if (tempFlowObj.Front && tempFlowObj.Rear) {
+          tempFlowObj = {
+            'Front': '',
+            'Rear': ''
+          };
+        } else { 
+          const frontOrRear: string = className.split(' ')[1];
+          console.log(frontOrRear);
+          tempFlowObj[frontOrRear] = value;
+          dataObj['TargetFlow'] = tempFlowObj;
+          // dataObj[frontOrRear] = value;
+          // if (frontOrRear === 'Front') {
+          //   dataObj.Front = value;
+          // } else if (frontOrRear === 'Rear') {
+          //   dataObj.Rear = value;
+          // }
+        }
+      
+      } else {
+        dataObj[className] = value;
+      }
+
     });
 
     settingRow.querySelectorAll('.TargetStatus').forEach((inputDOM, index) => {
@@ -57,7 +89,7 @@ const returnWholeSettingInfos = ():object => {
   });
 
   // console.log(JSON.stringify(settingAllObj));
-  // console.log(settingAllObj);
+  console.log(settingAllObj);
 
   return settingAllObj;
 };

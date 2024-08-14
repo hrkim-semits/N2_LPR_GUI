@@ -3,9 +3,9 @@ import { IconSelectAll } from '@arco-design/web-vue/es/icon';
 import './SettingPage.scss';
 import { useGlobalStore } from '@/stores/globalStore';
 import returnWholeSettingInfos from './returnWholeSettingInfos';
-import SetLPMRow from '@/components/SetLPMRow.vue';
-import PostPurgeRow from '@/components/PostPurgeRow.vue';
-import EMORow from '@/components/EMORow.vue';
+import SetLPMRow from './setLPMRow/SetLPMRow.vue';
+import PostPurgeRow from './postPurgeRow/PostPurgeRow.vue';
+import EMORow from './EMORow/EMORow.vue';
 export default defineComponent({
     name: 'SettingPage',
     components: {
@@ -47,8 +47,9 @@ export default defineComponent({
         };
         const handleClick = () => {
             console.log('handleClick');
-            console.log(returnWholeSettingInfos());
-            globalStore.sendMessage(JSON.stringify(returnWholeSettingInfos()));
+            // console.log(returnWholeSettingInfos());
+            returnWholeSettingInfos();
+            // globalStore.sendMessage(JSON.stringify(returnWholeSettingInfos()));
         };
         // input[type="text"]를 input[type="number"]처럼 위, 아래 방향키로 제어할 수 있도록 함
         document.addEventListener('DOMContentLoaded', () => {

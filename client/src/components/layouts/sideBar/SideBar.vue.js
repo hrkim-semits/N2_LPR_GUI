@@ -1,6 +1,6 @@
-import { computed, defineComponent } from 'vue';
-import { useGlobalStore } from '@/stores/globalStore';
+import { defineComponent } from 'vue';
 import './SideBar.scss';
+import EmergencyStopButton from './emergencyStopButton/EmergencyStopButton.vue';
 export default defineComponent({
     name: 'SideBar',
     props: {
@@ -9,17 +9,8 @@ export default defineComponent({
             required: true
         }
     },
-    setup(props, { emit }) {
-        const globalStore = useGlobalStore();
-        let isConnected = computed(() => globalStore.isConnected);
-        console.log(isConnected);
-        const handleClick = () => {
-            emit('emergencyStop');
-        };
-        return {
-            handleClick,
-            isConnected
-        };
+    components: {
+        EmergencyStopButton
     }
 });
 ;
@@ -128,15 +119,22 @@ function __VLS_template() {
     __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({});
     (__VLS_29.slots).default;
     const __VLS_29 = __VLS_pickFunctionalComponentCtx(__VLS_24, __VLS_26);
-    __VLS_elementAsFunction(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)({ ...{ onClick: (__VLS_ctx.handleClick) }, ...{ class: (({ active: __VLS_ctx.isStop })) }, ...{ class: ("emergencyBtn") }, });
-    __VLS_styleScopedClasses = ({ active: isStop });
-    (__VLS_ctx.isStop ? 'RESTART' : 'EMERGENCY STOP');
     // @ts-ignore
-    [isStop, isStop, handleClick,];
-    __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({});
-    (__VLS_ctx.isConnected ? 'websocket: connected' : 'websocket: not connected');
+    const __VLS_36 = {}
+        .EmergencyStopButton;
+    ({}.EmergencyStopButton);
+    ({}.EmergencyStopButton);
+    __VLS_components.EmergencyStopButton;
+    __VLS_components.EmergencyStopButton;
     // @ts-ignore
-    [isConnected,];
+    [EmergencyStopButton, EmergencyStopButton,];
+    // @ts-ignore
+    const __VLS_37 = __VLS_asFunctionalComponent(__VLS_36, new __VLS_36({ isStop: ((__VLS_ctx.$props.isStop)), }));
+    const __VLS_38 = __VLS_37({ isStop: ((__VLS_ctx.$props.isStop)), }, ...__VLS_functionalComponentArgsRest(__VLS_37));
+    ({}({ isStop: ((__VLS_ctx.$props.isStop)), }));
+    // @ts-ignore
+    [$props,];
+    const __VLS_41 = __VLS_pickFunctionalComponentCtx(__VLS_36, __VLS_38);
     if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
         __VLS_styleScopedClasses['sideBar'];
         __VLS_styleScopedClasses['sideBarNav'];
@@ -144,11 +142,12 @@ function __VLS_template() {
         __VLS_styleScopedClasses['menuIcon'];
         __VLS_styleScopedClasses['menuIcon'];
         __VLS_styleScopedClasses['menuIcon'];
-        __VLS_styleScopedClasses['emergencyBtn'];
     }
     var __VLS_slots;
     return __VLS_slots;
-    const __VLS_componentsOption = {};
+    const __VLS_componentsOption = {
+        EmergencyStopButton
+    };
     const __VLS_name = 'SideBar';
     let __VLS_internalComponent;
 }

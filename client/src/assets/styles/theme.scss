@@ -1,7 +1,6 @@
+// Light Mode
 $light-mode-logo-url: url('../../../public/ci_logo_img01.png');
 $light-mode-icon-url: url('../../../public/icon_sun.png');
-$dark-mode-logo-url: url('../../../public/ci_logo_img02.png');
-$dark-mode-icon-url: url('../../../public/icon_moon.png');
 
 :root {
   --bg-color: #f8f9fa;
@@ -29,6 +28,12 @@ $dark-mode-icon-url: url('../../../public/icon_moon.png');
     --border-color: #fcada8;
   }
 }
+
+
+
+// Dark Mode
+$dark-mode-logo-url: url('../../../public/ci_logo_img02.png');
+$dark-mode-icon-url: url('../../../public/icon_moon.png');
 
 [data-theme="dark"] {
   --bg-color: #121212;

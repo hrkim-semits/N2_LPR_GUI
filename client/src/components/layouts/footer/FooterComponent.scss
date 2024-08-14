@@ -9,28 +9,34 @@
   border-top: 1px solid var(--border-color) !important;
   position: relative;
   background-color: var(--bg-color);
+  font: {
+    size: $pxToRem12 !important;
+  }
   @include modeTransition();
 
-
-  span {
-    display: block;
-    padding: 0.39rem 0;
-    color: var(--text-disabled);
-  }
-
   .footerText {
-    font-size: $pxToRem12;
-    display: inline-block;
-    max-width: 30%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    color: var(--text-primary) !important;
   }
 
-  .copyright {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .footerCenter {
+
+    .copyright {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
+
+  .footerRight {
+    display: flex;
+    align-items: center;
+    gap: $pxToRem14;
+  }
+}
+
+.footerIcon {
+  width: $pxToRem14;
+  height: $pxToRem14;
+  color: var(--text-primary) !important;
 }

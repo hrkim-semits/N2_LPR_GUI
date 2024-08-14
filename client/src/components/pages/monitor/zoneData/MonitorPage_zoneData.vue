@@ -56,7 +56,8 @@
   
 <script lang='ts'>
   import { useGlobalStore } from '@/stores/globalStore';
-  import { defineComponent, reactive, watchEffect } from 'vue';
+  import { computed, defineComponent, reactive, watchEffect } from 'vue';
+  import './MonitorPage_zoneData.scss';
 
   export default defineComponent({
     name: 'ZoneData',
@@ -64,13 +65,13 @@
       zoneData: {
         type: Object,
         required: true
-      },
-      portWidth: {
-        type: Object,
-        required: true
       }
     },
     setup(props) {  
+      const globalStore = useGlobalStore();
+      let responsedZoneData = computed(() => globalStore.responsedZoneData);
+      let portWidth = { width: `${responsedZoneData.value.length? (100 / responsedZoneData.value.length) - 2 : 0}%` };
+
       const filteringFloat = ( str: string ) => {
         const isInteger = ( number: number ) => {
           return number % 1 === 0;
@@ -97,8 +98,8 @@
 
       watchEffect(() => {
         eachData.zoneID = props.zoneData.ZoneID;
-        eachData.flow.front = filteringFloat(props.zoneData.Flow1);
-        eachData.flow.rear = filteringFloat(props.zoneData.Flow2);
+        eachData.flow.front = filteringFloat(props.zoneData.Flow.Front);
+        eachData.flow.rear = filteringFloat(props.zoneData.Flow.Rear);
         eachData.pressure = filteringFloat(props.zoneData.Pressure);
         eachData.humidity = filteringFloat(props.zoneData.Humidity);
         eachData.temperature = filteringFloat(props.zoneData.Temperature);
@@ -106,7 +107,8 @@
       });
   
       return {
-        eachData
+        eachData,
+        portWidth
       };
     }
   });

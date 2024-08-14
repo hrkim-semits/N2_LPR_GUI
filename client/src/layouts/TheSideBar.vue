@@ -1,8 +1,31 @@
 <template>
-  <SideBar :isStop="isStop" @emergencyStop="handleEmergencyStop" />
+  <SideBar :isStop="$props.isStop" />
 </template>
 
-<script setup lang="ts">
+
+
+<script lang="ts">
+import { defineProps, defineEmits, defineComponent } from 'vue';
+import SideBar from '../components/layouts/sideBar/SideBar.vue';
+
+export default defineComponent({
+  name: 'TheSideBar',
+  props: {
+    isStop: {
+      type: Boolean,
+      required: true
+    },
+  },
+  components: {
+    SideBar
+  }
+});
+
+</script>
+
+
+
+<!-- <script lang="ts" setup>
 import { defineProps, defineEmits } from 'vue';
 import SideBar from '../components/layouts/sideBar/SideBar.vue';
 
@@ -18,4 +41,4 @@ const emit = defineEmits(['emergencyStop']);
 function handleEmergencyStop() {
   emit('emergencyStop');
 }
-</script>
+</script> -->

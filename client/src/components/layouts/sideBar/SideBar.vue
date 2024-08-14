@@ -13,15 +13,15 @@
         </li>
       </ul>
     </nav>
-    <button 
+    
+    <!-- <button 
       :class="{ active: isStop }"
       class="emergencyBtn" 
       @click="handleClick">
       {{ isStop ? 'RESTART' : 'EMERGENCY STOP' }}
-    </button>
-    <span>
-      {{ isConnected ? 'websocket: connected' : 'websocket: not connected' }}
-    </span>
+    </button> -->
+    <EmergencyStopButton :isStop="$props.isStop"></EmergencyStopButton>
+  
   </section>
 </template>
 
@@ -29,6 +29,7 @@
 import { computed, defineComponent, PropType } from 'vue';
 import { useGlobalStore } from '@/stores/globalStore';
 import './SideBar.scss';
+import EmergencyStopButton from './emergencyStopButton/EmergencyStopButton.vue';
 
 export default defineComponent({
   name: 'SideBar',
@@ -38,21 +39,8 @@ export default defineComponent({
       required: true
     }
   },
-  setup(props, { emit }) {
-    const globalStore = useGlobalStore();
-
-    let isConnected = computed(() => globalStore.isConnected);
-    
-    console.log(isConnected);
-
-    const handleClick = () => {        
-        emit('emergencyStop');
-    };
-
-    return {
-      handleClick,
-      isConnected
-    };
+  components: {
+    EmergencyStopButton
   }
 });
 </script>

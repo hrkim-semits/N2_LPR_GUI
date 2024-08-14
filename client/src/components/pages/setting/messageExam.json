@@ -1,0 +1,60 @@
+{
+  "MessageID": "SingalGUIMsgPurgeReq",
+  "MessageData": { 
+    "DataList": [
+      {
+        "TargetCommand": "INF:PODON;",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "INF:PODOF;",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "INF:SMTON;",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "INF:ABNST;",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "INF:CLDMP;",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "INF:CULOD",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "MOV:CLDMP",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "MOV:CULOD",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "MOV:MAPDO",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "GET:MAPDT;",
+        "TargetFlow": "100"
+      },
+      {
+        "TargetCommand": "PostPurge",
+        "TargetFlow": "100",
+        "PurgeDurationOfMillis": "3000"
+      },
+      {
+        "TargetCommand": "EMO",
+        "TargetStatus": [
+            "status1", 
+            "status2"
+        ]
+      }
+    ],
+    "BaseTime": ""
+  }
+}

@@ -23,6 +23,7 @@ export default defineConfig({
                     @import "@/assets/styles/theme.scss";
                     @import "@/assets/styles/colors.scss";
                     @import "@/assets/styles/mixins.scss";
+                    @import "@/assets/styles/variables.scss";
                     `,
             },
         },

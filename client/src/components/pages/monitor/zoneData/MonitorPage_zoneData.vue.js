@@ -1,17 +1,18 @@
-import { defineComponent, reactive, watchEffect } from 'vue';
+import { useGlobalStore } from '@/stores/globalStore';
+import { computed, defineComponent, reactive, watchEffect } from 'vue';
+import './MonitorPage_zoneData.scss';
 export default defineComponent({
     name: 'ZoneData',
     props: {
         zoneData: {
             type: Object,
             required: true
-        },
-        portWidth: {
-            type: Object,
-            required: true
         }
     },
     setup(props) {
+        const globalStore = useGlobalStore();
+        let responsedZoneData = computed(() => globalStore.responsedZoneData);
+        let portWidth = { width: `${responsedZoneData.value.length ? (100 / responsedZoneData.value.length) - 2 : 0}%` };
         const filteringFloat = (str) => {
             const isInteger = (number) => {
                 return number % 1 === 0;
@@ -43,7 +44,8 @@ export default defineComponent({
             eachData.baseTime = props.zoneData.baseTime;
         });
         return {
-            eachData
+            eachData,
+            portWidth
         };
     }
 });

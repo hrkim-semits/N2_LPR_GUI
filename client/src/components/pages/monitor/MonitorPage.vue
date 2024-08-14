@@ -1,7 +1,6 @@
 <template>
   <section class="mainContents" :class="{'emergency': isStop}">
     <ZoneData 
-      :portWidth="portWidth"
       v-for="(zoneData, index) in responsedZoneData" 
       :zoneData="zoneData" 
       :key="index"
@@ -9,24 +8,31 @@
   </section>
 </template>
   
-<script lang='ts' setup>
-import { computed, watchEffect } from 'vue';
+<script lang='ts'>
+import { computed, defineComponent, watchEffect } from 'vue';
 import './MonitorPage.scss';
 import { useGlobalStore } from '@/stores/globalStore';
-import ZoneData from './MonitorPage_zoneData.vue';
+import ZoneData from './zoneData/MonitorPage_zoneData.vue';
 
-const globalStore = useGlobalStore();
+export default defineComponent({
+  name: 'MonitorPage',
+  props: {
+    isStop: {
+      type: Boolean,
+      required: true
+    }
+  },
+  components: {
+    ZoneData
+  },
+  setup() {
+    const globalStore = useGlobalStore();
+    let responsedZoneData = computed(() => globalStore.responsedZoneData);
 
-const isStop = computed(()=> globalStore.isStop);
-
-let responsedZoneData = computed(() => globalStore.responsedZoneData);
-
-let portWidth = { width: `${(100 / responsedZoneData.value.length) - 2}%` };
-
-watchEffect(() => {
-  portWidth = { width: `${(100 / responsedZoneData.value.length) - 2}%` };
+    return {
+      responsedZoneData
+    };
+  }
 });
-</script>
 
-<script lang="ts">
 </script>

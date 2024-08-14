@@ -1,0 +1,13 @@
+.webSocketStatus {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  .webSocketStatusColor {
+    display: inline-block;
+    width: $pxToRem12;
+    height: $pxToRem12;
+    background-color: $red-6;
+    padding: 0;
+  }
+}

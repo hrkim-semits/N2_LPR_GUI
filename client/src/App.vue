@@ -1,13 +1,6 @@
-<!-- Overlay는 현재 사용하진 않지만 혹시 몰라 주석처리 -->
-
 <template>
-  <!-- <Overlay v-if="isStop" @close="reactivation"></Overlay> -->
-  <!-- <button class="modeToggleButton" @click="toggleTheme">
-    {{ theme === 'light' ? 'Dark' : 'Light' }} Mode
-  </button> -->
-  <!-- <ModeToggle></ModeToggle> -->
   <TheHeader></TheHeader>
-  <TheSideBar @emergencyStop="emergencyStop" :isStop="isStop"></TheSideBar>
+  <TheSideBar :isStop="isStop"></TheSideBar>
   <TheView :isStop="isStop"></TheView>
   <TheFooter></TheFooter>
 </template>
@@ -40,27 +33,15 @@ const updateEmergencyUI = () => {
     }
 };
 
-function emergencyStop() {
-  // console.log('emergency stop');
-  globalStore.toggleStop();
-}
-
 onMounted(() => {
   // 마운트 됐을 시점에 stop일 수도...? -> 웹 소켓으로 초기 상태값 받아오기?
   // 웹 소켓으로 초기(기존) 상태값 받아서 출력 (monitor, setting, log, stop)?
-  // footer update
   globalStore.createWebSocket(globalStore.webSocketTestUrl);
-  // globalStore.createWebSocket(globalStore.webSocketTestUrl2);
   updateEmergencyUI();
 });
 
 watch(() => isStop.value, () => {
   updateEmergencyUI();
-});
-
-onUnmounted(() => {
-  // 스토어 초기화
-  // globalStore.responses = [];
 });
 
 </script>

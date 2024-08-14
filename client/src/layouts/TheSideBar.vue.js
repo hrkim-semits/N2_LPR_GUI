@@ -1,26 +1,18 @@
-import { defineProps, defineEmits } from 'vue';
+import { defineComponent } from 'vue';
 import SideBar from '../components/layouts/sideBar/SideBar.vue';
-const { defineSlots, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
-const props = defineProps({
-    isStop: {
-        type: Boolean,
-        required: true
-    }
-});
-const emit = defineEmits(['emergencyStop']);
-function handleEmergencyStop() {
-    emit('emergencyStop');
-}
-const __VLS_fnComponent = (await import('vue')).defineComponent({
+export default defineComponent({
+    name: 'TheSideBar',
     props: {
         isStop: {
             type: Boolean,
             required: true
-        }
+        },
     },
-    emits: {},
+    components: {
+        SideBar
+    }
 });
-let __VLS_functionalComponentProps;
+;
 function __VLS_template() {
     let __VLS_ctx;
     /* Components */
@@ -31,54 +23,27 @@ function __VLS_template() {
     let __VLS_styleScopedClasses;
     let __VLS_resolvedLocalAndGlobalComponents;
     // @ts-ignore
+    const __VLS_0 = {}
+        .SideBar;
+    ({}.SideBar);
+    __VLS_components.SideBar;
+    // @ts-ignore
     [SideBar,];
     // @ts-ignore
-    const __VLS_0 = __VLS_asFunctionalComponent(SideBar, new SideBar({ ...{ 'onEmergencyStop': {} }, isStop: ((__VLS_ctx.isStop)), }));
-    const __VLS_1 = __VLS_0({ ...{ 'onEmergencyStop': {} }, isStop: ((__VLS_ctx.isStop)), }, ...__VLS_functionalComponentArgsRest(__VLS_0));
-    ({}({ ...{ 'onEmergencyStop': {} }, isStop: ((__VLS_ctx.isStop)), }));
-    let __VLS_5;
-    const __VLS_6 = {
-        onEmergencyStop: (__VLS_ctx.handleEmergencyStop)
-    };
+    const __VLS_1 = __VLS_asFunctionalComponent(__VLS_0, new __VLS_0({ isStop: ((__VLS_ctx.$props.isStop)), }));
+    const __VLS_2 = __VLS_1({ isStop: ((__VLS_ctx.$props.isStop)), }, ...__VLS_functionalComponentArgsRest(__VLS_1));
+    ({}({ isStop: ((__VLS_ctx.$props.isStop)), }));
     // @ts-ignore
-    [isStop, handleEmergencyStop,];
-    const __VLS_4 = __VLS_pickFunctionalComponentCtx(SideBar, __VLS_1);
-    let __VLS_2;
-    let __VLS_3;
+    [$props,];
+    const __VLS_5 = __VLS_pickFunctionalComponentCtx(__VLS_0, __VLS_2);
     if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
     }
     var __VLS_slots;
     return __VLS_slots;
-    const __VLS_componentsOption = {};
-    let __VLS_name;
-    let __VLS_defineComponent;
-    const __VLS_internalComponent = __VLS_defineComponent({
-        setup() {
-            return {
-                SideBar: SideBar,
-                handleEmergencyStop: handleEmergencyStop,
-            };
-        },
-        props: {
-            isStop: {
-                type: Boolean,
-                required: true
-            }
-        },
-        emits: {},
-    });
+    const __VLS_componentsOption = {
+        SideBar
+    };
+    const __VLS_name = 'TheSideBar';
+    let __VLS_internalComponent;
 }
-export default (await import('vue')).defineComponent({
-    setup() {
-        return {};
-    },
-    props: {
-        isStop: {
-            type: Boolean,
-            required: true
-        }
-    },
-    emits: {},
-});
-;
 //# sourceMappingURL=TheSideBar.vue.js.map
