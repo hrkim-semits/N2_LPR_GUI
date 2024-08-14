@@ -1,4 +1,4 @@
-import { computed, onMounted, watch, onUnmounted } from 'vue';
+import { computed, onMounted, watch } from 'vue';
 import { useGlobalStore } from '@/stores/globalStore';
 import TheHeader from '@/layouts/TheHeader.vue';
 import TheSideBar from '@/layouts/TheSideBar.vue';
@@ -7,7 +7,6 @@ import TheFooter from '@/layouts/TheFooter.vue';
 const { defineProps, defineSlots, defineEmits, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
 const globalStore = useGlobalStore();
 const isStop = computed(() => globalStore.isStop);
-const isConnected = computed(() => globalStore.isConnected);
 const updateEmergencyUI = () => {
     if (isStop.value) {
         document.body.classList.add('emergency');
@@ -19,17 +18,11 @@ const updateEmergencyUI = () => {
 onMounted(() => {
     // 마운트 됐을 시점에 stop일 수도...? -> 웹 소켓으로 초기 상태값 받아오기?
     // 웹 소켓으로 초기(기존) 상태값 받아서 출력 (monitor, setting, log, stop)?
-    // footer update
     globalStore.createWebSocket(globalStore.webSocketTestUrl);
-    // globalStore.createWebSocket(globalStore.webSocketTestUrl2);
     updateEmergencyUI();
 });
 watch(() => isStop.value, () => {
     updateEmergencyUI();
-});
-onUnmounted(() => {
-    // 스토어 초기화
-    // globalStore.responses = [];
 });
 const __VLS_fnComponent = (await import('vue')).defineComponent({});
 let __VLS_functionalComponentProps;

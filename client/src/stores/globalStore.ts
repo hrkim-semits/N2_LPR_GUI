@@ -44,21 +44,21 @@ export const useGlobalStore = defineStore('globalStore', () => {
         }
       } else if (message.MessageID === 'LPRZonePurgeAttributesMsg') {
         console.log('LPRZonePurgeAttributesMsg responsed successfully');
-        let responsedZoneID = message.MessageData.ArchiveObject.ZoneID;
+        const responsedZoneID = message.MessageData.ArchiveObject.ZoneID;
 
         // Zone ID 혼선으로 임시로 보정해 테스트
-        switch (responsedZoneID) {
-          case '11110010':
-            responsedZoneID = '10010010';
-            message.MessageData.ArchiveObject.ZoneID = '10010010';
-            break;
-          case '11110020':
-            responsedZoneID = '10010020';
-            message.MessageData.ArchiveObject.ZoneID = '10010020';
-            break;
-          default:
-            console.warn('need check responseZoneID');
-        }
+        // switch (responsedZoneID) {
+        //   case '11110010':
+        //     responsedZoneID = '10010010';
+        //     message.MessageData.ArchiveObject.ZoneID = '10010010';
+        //     break;
+        //   case '11110020':
+        //     responsedZoneID = '10010020';
+        //     message.MessageData.ArchiveObject.ZoneID = '10010020';
+        //     break;
+        //   default:
+        //     console.warn('need check responseZoneID');
+        // }
 
         // console.log(responsedZoneID);
         if (responsedZoneData.value) {
@@ -68,7 +68,7 @@ export const useGlobalStore = defineStore('globalStore', () => {
             // console.log('responsedZoneID: ', responsedZoneID, ' type: ', typeof responsedZoneID);
             
             if (eachData.ZoneID === responsedZoneID) {
-              console.log('zoneID 찾음!!');
+              // console.log('zoneID 찾음!!');
 
               responsedZoneData.value[index] = {...message.MessageData.ArchiveObject, BaseTime: message.MessageData.BaseTime};
               // console.log('갱신됨? ', responsedZoneData);
@@ -127,24 +127,20 @@ export const useGlobalStore = defineStore('globalStore', () => {
         isConnected.value = true;
         console.log('WebSocket connection established');
 
-        sendMessage(JSON.stringify(D1GUIMsgZoneInfosReq));
+        // sendMessage(JSON.stringify(D1GUIMsgZoneInfosReq));
 
         // test
-        // const testObj1 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'0','IndexCount':'5','ZoneString':'{"ZoneID":"10010010","Name":"10010010","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010010","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010010","Flow1":"99.9","Flow2":"23.03","Flow3":"-1","Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010010","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
-
-        // const testObj2 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'1','IndexCount':'5','ZoneString':'{"ZoneID":"10010020","Name":"10010020","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010020","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010020","Flow1":"99.9","Flow2":"23.03","Flow3":"-1","Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010020","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
+        const testObj1 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'0','IndexCount':'5','ZoneString':'{"ZoneID":"10010010","Name":"10010010","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010010","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010010","Flow": {"Front":"99", "Rear":"87"},"Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010010","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
+        const testObj2 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'1','IndexCount':'5','ZoneString':'{"ZoneID":"10010020","Name":"10010020","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010020","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010020","Flow": {"Front":"99", "Rear":"87"},"Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010020","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
+        const testObj3 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'2','IndexCount':'5','ZoneString':'{"ZoneID":"10010030","Name":"10010030","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010030","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010030","Flow": {"Front":"99", "Rear":"87"},"Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010030","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
+        const testObj4 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'3','IndexCount':'5','ZoneString':'{"ZoneID":"10010040","Name":"10010040","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010040","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010040","Flow": {"Front":"99", "Rear":"87"},"Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010040","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
+        const testObj5 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'4','IndexCount':'5','ZoneString':'{"ZoneID":"10010050","Name":"10010050","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010050","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010050","Flow": {"Front":"99", "Rear":"87"},"Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010050","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
       
-        // const testObj3 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'2','IndexCount':'5','ZoneString':'{"ZoneID":"10010030","Name":"10010030","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010030","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010030","Flow1":"99.9","Flow2":"23.03","Flow3":"-1","Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010030","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
-      
-        // const testObj4 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'3','IndexCount':'5','ZoneString':'{"ZoneID":"10010040","Name":"10010040","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010040","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010040","Flow1":"99.9","Flow2":"23.03","Flow3":"-1","Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010040","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
-      
-        // const testObj5 = JSON.stringify({'MessageID':'D1GUIMsgZoneInfosRsp','MessageData':{'Index':'4','IndexCount':'5','ZoneString':'{"ZoneID":"10010050","Name":"10010050","Level":"-1","Direction":"0","OccupiedAttributes":{"ZoneID":"10010010","ReservedTaskID":"-1"},"StateAttributes":{"ZoneID":"10010050","ZoneState":"0","AlarmID":"-1"},"Maker":"-1","LPRPurgeAttributes":{"ZoneID":"10010050","Flow1":"99.9","Flow2":"23.03","Flow3":"-1","Pressure":"22.2222","Humidity":"1.888","Temperature":"-8"},"LPRUserAttributes":{"ZoneID":"10010050","AutoIOPort":"-1"}}','ZoneGUIDataString':'','BaseTime':'2024.07.31 14:58:02'}});
-      
-        // buffer.value.push(testObj1);
-        // buffer.value.push(testObj2);
-        // buffer.value.push(testObj3);
-        // buffer.value.push(testObj4);
-        // buffer.value.push(testObj5);
+        buffer.value.push(testObj1);
+        buffer.value.push(testObj2);
+        buffer.value.push(testObj3);
+        buffer.value.push(testObj4);
+        buffer.value.push(testObj5);
         processBuffer();
 
       };

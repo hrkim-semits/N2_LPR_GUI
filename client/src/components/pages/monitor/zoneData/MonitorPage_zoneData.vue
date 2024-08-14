@@ -98,8 +98,8 @@
 
       watchEffect(() => {
         eachData.zoneID = props.zoneData.ZoneID;
-        eachData.flow.front = filteringFloat(props.zoneData.Flow1);
-        eachData.flow.rear = filteringFloat(props.zoneData.Flow2);
+        eachData.flow.front = filteringFloat(props.zoneData.Flow.Front);
+        eachData.flow.rear = filteringFloat(props.zoneData.Flow.Rear);
         eachData.pressure = filteringFloat(props.zoneData.Pressure);
         eachData.humidity = filteringFloat(props.zoneData.Humidity);
         eachData.temperature = filteringFloat(props.zoneData.Temperature);
